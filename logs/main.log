@@ -1,0 +1,12 @@
+2025-01-22 23:50:14 - file_logger - INFO - Application started
+2025-01-22 23:50:26 - file_logger - INFO - DeepSeek client initialized with API key
+2025-01-22 23:50:37 - file_logger - DEBUG - Starting API request preparation
+2025-01-22 23:50:37 - file_logger - INFO - Sending text-only request to model deepseek-chat
+2025-01-22 23:50:37 - file_logger - DEBUG - Request payload preview:
+Extract and structure ONLY the following information from the product description:
+
+        Required Information:
+        1. Frame Material (composition and finish):
+        2. Lens Type (material and...
+2025-01-22 23:50:39 - file_logger - ERROR - API request failed: Error code: 402 - {'error': {'message': 'Insufficient Balance', 'type': 'unknown_error', 'param': None, 'code': 'invalid_request_error'}}
+2025-01-22 23:50:39 - file_logger - DEBUG - Error details: {'request': <Request('POST', 'https://api.deepseek.com/chat/completions')>, 'message': "Error code: 402 - {'error': {'message': 'Insufficient Balance', 'type': 'unknown_error', 'param': None, 'code': 'invalid_request_error'}}", 'body': {'message': 'Insufficient Balance', 'type': 'unknown_error', 'param': None, 'code': 'invalid_request_error'}, 'code': 'invalid_request_error', 'param': None, 'type': 'unknown_error', 'response': <Response [402 Payment Required]>, 'status_code': 402, 'request_id': None}

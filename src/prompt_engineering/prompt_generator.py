@@ -38,17 +38,68 @@ class PromptGenerator:
             )
             
             # Vision analysis prompt
-            vision_instructions = """Analyze these eyewear images and extract:
-            - Frame material texture details
-            - Lens tint/color gradients
-            - Hinge mechanism type
-            - Logo placements and engraving styles
-            - Any visible surface imperfections
-            - Measurements validation
-            - Unique design elements"""
+            vision_instructions = """Analyze these eyewear images and extract these specific details(if present):
+            1. Frame Material Analysis:
+            - Identify material type (acetate, titanium, stainless steel, etc.)
+            - Note surface texture details: 
+            • Marbling patterns (vein density/color distribution)
+            • Layered acetate composition (visible layer count)
+            • Surface finish (matte, glossy, brushed metal)
+            - Document material thickness variations (temple vs front)
+
+            2. Logo & Branding Elements:
+            - Locate exact placement of "WARBY PARKER" text:
+            • Side (left/right temple)
+            • Position from hinge (e.g., 25mm from hinge on left temple)
+            • Engraving depth and style (embossed/debossed/printed)
+
+            3. Lens Specifications:
+            - Tint gradient analysis:
+            • Gradient direction (top-bottom/left-right)
+            • Color intensity mapping (RGB values estimation)
+            • Transition sharpness (gradual/abrupt)
+            - Surface properties:
+            • Reflectivity (mirror/anti-reflective coating)
+            • Presence of polarization patterns
+            • Edge bevel details (polished/rough)
+
+            4. Hinge Mechanism Documentation:
+            - Hinge type identification:
+            • Barrel hinge (number of barrels)
+            • Spring hinge (visible coil mechanism)
+            • Screwless magnetic closure
+            - Component materials (stainless steel, nickel alloy)
+            - Screw characteristics:
+            • Head type (phillips/flat/hex)
+            • Count per hinge
+            • Symmetry between sides
+
+            5. Measurement Validation:
+            - Verify advertised measurements using visual references:
+            • Bridge width (distance between lenses)
+            • Temple length (from hinge to tip)
+            • Lens height/width ratio
+            - Identify physical measurement markers:
+
+            6. Unique Design Features:
+            - Architectural elements:
+            • Decorative rivets (material/count)
+            • Temple end designs (curved/flat)
+            • Nose pad materials (silicone/acetate)
+            - Functional components:
+            • Adjustable nose pads
+            • Cable temple tips
+            • Hidden spring mechanisms
+
+            Format Requirements:
+            - Use precise millimeter measurements
+            - Note left/right orientation
+            - Include RGB color codes where applicable
+            - Specify material PBR values (roughness 0-1 scale)
+            - Maintain technical terminology"""
             
             # Get vision analysis from DeepSeek
-            vision_response = await self.llm.invoke_vision(
+            vision_response = await self.llm.ainvoke(
                 prompt=vision_instructions,
                 image_urls=encoded_images
             )
@@ -92,4 +143,4 @@ class PromptGenerator:
         
         Output ONLY the final prompt with no additional formatting."""
         
-        return await self.llm.invoke_text(validation_prompt)
+        return await self.llm.ainvoke(validation_prompt)

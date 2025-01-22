@@ -1,68 +1,89 @@
+from openai import AsyncOpenAI
 import os
-import httpx
-from typing import List, Dict
-from pydantic import BaseModel
 from src.utils.logger import configure_logger
-
-logger = configure_logger()
-
-class DeepSeekMessage(BaseModel):
-    role: str  # "system" or "user"
-    content: str
-    images: List[str] = []
+import base64
+import logging
+from pathlib import Path
 
 class DeepSeekClient:
     def __init__(self):
-        self.api_key = os.getenv("DEEPSEEK_API_KEY")
-        self.base_url = os.getenv("DEEPSEEK_API_URL")
-        self.timeout = 30
-        self.max_retries = 3
+        self.logger = configure_logger()
+        self.client = AsyncOpenAI(
+            api_key=os.getenv("DEEPSEEK_API_KEY"),
+            base_url="https://api.deepseek.com"
+        )
+        self.logger.info("DeepSeek client initialized with API key")
+        
+    async def ainvoke(self, prompt: str, images: list = None, model: str = "deepseek-chat"):
+        """Process text and/or images with detailed logging"""
+        try:
+            self.logger.debug("Starting API request preparation")
+            messages = [{"role": "user", "content": prompt}]
+            operation_type = "text-only"
+            
+            if images:
+                self.logger.info(f"Processing {len(images)} images with vision model")
+                messages[0]["content"] = [{"type": "text", "text": prompt}]
+                
+                for idx, img_path in enumerate(images, 1):
+                    encoded_image = await self._encode_image(img_path)
+                    messages[0]["content"].append({
+                        "type": "image_url",
+                        "image_url": {"url": encoded_image}
+                    })
+                    self.logger.debug(f"Added image {idx}/{len(images)}: {Path(img_path).name}")
+                
+                model = "deepseek-vision"
+                operation_type = "multimodal"
+                self.logger.info(f"Final model set to {model} with {len(images)} images")
 
-    async def _make_request(self, messages: List[Dict], model: str = "deepseek-chat") -> str:
-        headers = {
-            "Authorization": f"Bearer {self.api_key}",
-            "Content-Type": "application/json"
-        }
+            self.logger.info(f"Sending {operation_type} request to model {model}")
+            self.logger.debug(f"Request payload preview:\n{messages[0]['content'][:200]}...")
 
-        payload = {
-            "model": model,
-            "messages": messages,
-            "temperature": 0.1,
-            "top_p": 0.3,
-            "max_tokens": 4000
-        }
+            response = await self.client.chat.completions.create(
+                model=model,
+                messages=messages,
+                temperature=0.1,
+                max_tokens=4000
+            )
 
-        async with httpx.AsyncClient(timeout=self.timeout) as client:
-            for attempt in range(self.max_retries):
-                try:
-                    response = await client.post(
-                        f"{self.base_url}/chat/completions",
-                        json=payload,
-                        headers=headers
-                    )
-                    response.raise_for_status()
-                    return response.json()["choices"][0]["message"]["content"]
-                    
-                except httpx.HTTPStatusError as e:
-                    logger.error(f"API Error: {e.response.status_code} - {e.response.text}")
-                    if attempt == self.max_retries - 1:
-                        raise
-                    await asyncio.sleep(2 ** attempt)
-                except Exception as e:
-                    logger.error(f"Unexpected error: {str(e)}")
-                    raise
+            self.logger.success(f"API request completed successfully")
+            self.logger.debug(
+                f"Response metadata: "
+                f"Tokens used - {response.usage.total_tokens} "
+                f"(Prompt: {response.usage.prompt_tokens}, "
+                f"Completion: {response.usage.completion_tokens})"
+            )
+            
+            response_content = response.choices[0].message.content
+            self.logger.debug(f"Response content preview:\n{response_content[:200]}...")
+            
+            return response_content
+            
+        except Exception as e:
+            self.logger.error(f"API request failed: {str(e)}")
+            self.logger.debug(f"Error details: {vars(e)}")
+            raise
 
-    async def invoke_vision(self, prompt: str, image_urls: List[str]) -> str:
-        messages = [{
-            "role": "user",
-            "content": prompt,
-            "images": image_urls
-        }]
-        return await self._make_request(messages, "deepseek-vision")
-
-    async def invoke_text(self, prompt: str) -> str:
-        messages = [{
-            "role": "user",
-            "content": prompt
-        }]
-        return await self._make_request(messages)
+    async def _encode_image(self, image_path):
+        """Encode image with size logging and error handling"""
+        try:
+            self.logger.debug(f"Processing image: {image_path}")
+            with open(image_path, "rb") as image_file:
+                image_data = image_file.read()
+                encoded = base64.b64encode(image_data).decode("utf-8")
+                
+                # Determine MIME type and log details
+                file_ext = Path(image_path).suffix.lower()
+                mime = "image/jpeg" if file_ext in (".jpg", ".jpeg") else "image/png"
+                self.logger.debug(
+                    f"Encoded image: {Path(image_path).name} | "
+                    f"Type: {mime} | "
+                    f"Size: {len(image_data)//1024} KB"
+                )
+                
+                return f"data:{mime};base64,{encoded}"
+                
+        except Exception as e:
+            self.logger.error(f"Image encoding failed for {image_path}: {str(e)}")
+            raise

@@ -8,6 +8,11 @@ from src.prompt_engineering.config_parser import ConfigGenerator
 from src.rodin_integration.api_handler import RodinAPI
 from src.utils.file_handlers import FileManager
 from src.llm.deepseek_client import DeepSeekClient
+from src.utils.logger import configure_logger
+
+# Initialize logging
+logger = configure_logger()
+logger.info("Application started")
 
 async def main(product_url):
     load_dotenv()
