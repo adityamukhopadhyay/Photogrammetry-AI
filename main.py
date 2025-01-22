@@ -1,5 +1,4 @@
-import asyncio
-import os
+import asyncio  
 from dotenv import load_dotenv
 from src.data_collection.image_downloader import ImageDownloader
 from src.data_collection.product_scraper import WarbyScraper

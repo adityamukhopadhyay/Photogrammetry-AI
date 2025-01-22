@@ -1,32 +1,23 @@
-from langchain_community.document_loaders import AsyncHtmlLoader
-from langchain_community.document_transformers import Html2TextTransformer
-from langchain_core.output_parsers import PydanticOutputParser
-from langchain_core.pydantic_v1 import BaseModel, Field
-import json
+import cv2
+import numpy as np
+from pathlib import Path
 
-class ProductSpecs(BaseModel):
-    material: str = Field(..., description="Frame material composition")
-    lens_type: str = Field(..., description="Type of lenses")
-    measurements: dict = Field(..., description="Dimensions in mm format")
-    branding: list[str] = Field(..., description="All branding elements")
-    features: list[str] = Field(..., description="Special features")
-
-class WarbyScraper:
-    def __init__(self, llm):
-        self.llm = llm
-        self.parser = PydanticOutputParser(pydantic_object=ProductSpecs)
+class ImageEnhancer:
+    def __init__(self, output_dir="data/processed_images"):
+        self.output_dir = Path(output_dir)
+        self.output_dir.mkdir(parents=True, exist_ok=True)
         
-    async def scrape(self, url):
-        loader = AsyncHtmlLoader([url])
-        docs = await loader.load()
+    def enhance(self, image_path):
+        img = cv2.imread(str(image_path))
         
-        transformer = Html2TextTransformer()
-        transformed = transformer.transform_documents(docs)
+        # Contrast enhancement
+        lab = cv2.cvtColor(img, cv2.COLOR_BGR2LAB)
+        l, a, b = cv2.split(lab)
+        clahe = cv2.createCLAHE(clipLimit=3.0, tileGridSize=(8,8))
+        limg = cv2.merge([clahe.apply(l), a, b])
+        enhanced = cv2.cvtColor(limg, cv2.COLOR_LAB2BGR)
         
-        prompt = f"""Extract product specs from this page content:
-        {transformed[0].page_content}
-        
-        {self.parser.get_format_instructions()}"""
-        
-        result = await self.llm.ainvoke(prompt)
-        return self.parser.parse(result.content)
+        # Save processed image
+        output_path = self.output_dir / f"enhanced_{image_path.name}"
+        cv2.imwrite(str(output_path), enhanced)
+        return output_path
