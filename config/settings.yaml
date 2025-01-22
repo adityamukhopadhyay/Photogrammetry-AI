@@ -1,0 +1,39 @@
+rodin:
+  model_id: "fal-ai/hyper3d/rodin"
+  default_params:
+    quality: "high"
+    material: "PBR"
+    tier: "Regular"
+    geometry_format: "glb"
+    addons: "HighPack"
+    use_hyper: true
+  timeout: 300
+  retries: 3
+
+llm:
+  provider: "deepseek"
+  models:
+    text: "deepseek-chat"
+    vision: "deepseek-vision"
+  params:
+    temperature: 0.1
+    max_tokens: 4000
+    top_p: 0.3
+    timeout: 30
+    max_images: 4
+
+paths:
+  raw_images: "data/raw_images"
+  processed_images: "data/processed_images"
+  prompts: "data/prompts"
+  configs: "data/configs"
+  models: "data/3d_models"
+  logs: "logs"
+
+processing:
+  image:
+    min_resolution: 2048
+    max_aspect_ratio: 1.5
+    enhancement:
+      clahe_clip_limit: 3.0
+      clahe_grid_size: [8, 8]
