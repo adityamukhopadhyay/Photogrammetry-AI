@@ -29,6 +29,35 @@ class WarbyScraper:
             "viewport": {"width": 1920, "height": 1080},
             "java_script_enabled": True
         }
+        self.image_urls = []  # New list to store image URLs
+
+    def _extract_image_urls(self, soup):
+        """Extract specific product image URLs from HTML"""
+        images = []
+        for i in [1, 4]:
+            img_tag = soup.find('img', {'alt': f'PDP Thumbnail Image {i}'})
+            if img_tag and img_tag.get('src'):
+                images.append(img_tag['src'])
+                logger.debug(f"Found PDP Thumbnail Image {i}: {img_tag['src']}")
+
+        return images
+
+    def _create_documents(self, html_content, source_url):
+        soup = BeautifulSoup(html_content, "html.parser")
+        
+        # Extract image URLs and store in instance variable
+        self.image_urls = self._extract_image_urls(soup)
+        logger.info(f"Extracted {len(self.image_urls)} product images")
+        
+        return [
+            Document(
+                page_content=soup.get_text(separator=" ", strip=True),
+                metadata={
+                    "source": source_url,
+                    "image_urls": self.image_urls  # Store in metadata
+                }
+            )
+        ]
 
     async def scrape(self, url):
         logger.info(f"🔄 Starting scrape for URL: {url}")
@@ -68,14 +97,14 @@ class WarbyScraper:
             
             return content
 
-    def _create_documents(self, html_content, source_url):
-        soup = BeautifulSoup(html_content, "html.parser")
-        return [
-            Document(
-                page_content=soup.get_text(separator=" ", strip=True),
-                metadata={"source": source_url}
-            )
-        ]
+    # def _create_documents(self, html_content, source_url):
+    #     soup = BeautifulSoup(html_content, "html.parser")
+    #     return [
+    #         Document(
+    #             page_content=soup.get_text(separator=" ", strip=True),
+    #             metadata={"source": source_url}
+    #         )
+    #     ]
 
     def _transform_documents(self, docs):
         return Html2TextTransformer().transform_documents(docs)
@@ -106,4 +135,4 @@ class WarbyScraper:
         """
         
         result = await self.llm.ainvoke(prompt)
-        return self.parser.parse(result.content)
+        return self.parser.parse(result)

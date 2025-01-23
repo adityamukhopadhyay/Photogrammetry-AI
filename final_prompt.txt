@@ -1,0 +1,46 @@
+Create a 3D model of a pair of glasses based on the given specifications and visual analysis of the glasses.  
+
+1. Material Properties:  
+- Frame material: Hand-polished cellulose acetate with a marbled brown tone pattern.  
+- Surface finish: Smooth and glossy.  
+- PBR values: Roughness = 0.4, Metallic = 0.0.  
+- Include subtle surface imperfection maps (micro-scratches, tooling marks) for realism.  
+
+2. Geometric Requirements:  
+- Frame measurements: Medium = 134mm, Wide = 138mm, Medium Wide = 134mm.  
+- Bridge curvature radius: ±0.2mm tolerance.  
+- Temple arm taper gradient: Gradual and consistent.  
+- Lens bevel angle: Edge thickness profile to match oversized lenses.  
+- Maintain inter-pupillary distance alignment between front (0°) and angled (45°) views.  
+
+3. Branding Implementation:  
+- Etch "WARBY PARKER" text on the right temple:  
+  - Position: 10mm from hinge centerpoint.  
+  - Engraving: Printed style, 0.3mm depth debossed.  
+  - Font: Sans-serif, 2.5mm height.  
+  - Alignment: Follow temple curvature (3° radial offset).  
+- Include graduated rivets on temples for structural support.  
+
+4. Optical Requirements:  
+- Lens material: Polycarbonate.  
+- Lens parameters:  
+  - Refractive index (IOR): 1.49.  
+  - Anti-reflective and scratch-resistant coatings.  
+  - 100% UV ray blocking.  
+  - Edge polish: 0.5mm matte bevel.  
+- Lenses: Clear with no visible tint gradient.  
+
+5. Mechanical Components:  
+- Hinge type: Standard barrel hinge.  
+  - Barrel count: 3-5 components.  
+  - Spring tension: 500-700gf.  
+  - Screw type: M1.4×3mm flathead.  
+- Nose pad material: Medical-grade silicone (Shore 50A).  
+
+6. Quality Assurance:  
+- Prevent texture UV stretching and color value mismatches (ΔE < 2.0).  
+- Maintain edge detailing accuracy (0.1mm feature resolution).  
+- Ensure surface normal consistency between front and angled views.  
+- Avoid surface normal inconsistencies and edge detailing errors.  
+
+The final model should accurately reflect the physical properties, material finishes, and branding elements while adhering to the specified optical and mechanical requirements.

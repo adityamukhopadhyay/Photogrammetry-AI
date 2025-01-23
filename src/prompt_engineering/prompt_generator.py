@@ -6,8 +6,8 @@ from src.utils.logger import configure_logger
 logger = configure_logger()
 
 class PromptGenerator:
-    def __init__(self):
-        self.llm = DeepSeekClient()
+    def __init__(self, llm=None):
+        self.llm = llm if llm is not None else DeepSeekClient()
         self.template = """Generate a detailed 3D modeling prompt for glasses with these specifications:
         Material: {material}
         Lens Type: {lens_type}
@@ -39,64 +39,66 @@ class PromptGenerator:
             
             # Vision analysis prompt
             vision_instructions = """Analyze these eyewear images and extract these specific details(if present):
-            1. Frame Material Analysis:
-            - Identify material type (acetate, titanium, stainless steel, etc.)
-            - Note surface texture details: 
-            • Marbling patterns (vein density/color distribution)
-            • Layered acetate composition (visible layer count)
-            • Surface finish (matte, glossy, brushed metal)
-            - Document material thickness variations (temple vs front)
+                1. Frame Material Analysis:
+                - Identify material type (acetate, titanium, stainless steel, etc.)
+                - Note surface texture details: 
+                • Marbling patterns (vein density/color distribution)
+                • Layered acetate composition (visible layer count)
+                • Surface finish (matte, glossy, brushed metal)
+                - Document material thickness variations (temple vs front)
 
-            2. Logo & Branding Elements:
-            - Locate exact placement of "WARBY PARKER" text:
-            • Side (left/right temple)
-            • Position from hinge (e.g., 25mm from hinge on left temple)
-            • Engraving depth and style (embossed/debossed/printed)
+                2. Logo & Branding Elements:
+                - Locate exact placement of "WARBY PARKER" text:
+                • Side (left/right temple)
+                • Position from hinge (e.g., 25mm from hinge on left temple)
+                • Engraving depth and style (embossed/debossed/printed)
 
-            3. Lens Specifications:
-            - Tint gradient analysis:
-            • Gradient direction (top-bottom/left-right)
-            • Color intensity mapping (RGB values estimation)
-            • Transition sharpness (gradual/abrupt)
-            - Surface properties:
-            • Reflectivity (mirror/anti-reflective coating)
-            • Presence of polarization patterns
-            • Edge bevel details (polished/rough)
+                3. Lens Specifications:
+                - Tint gradient analysis:
+                • Gradient direction (top-bottom/left-right)
+                • Color intensity mapping (RGB values estimation)
+                • Transition sharpness (gradual/abrupt)
+                - Surface properties:
+                • Reflectivity (mirror/anti-reflective coating)
+                • Presence of polarization patterns
+                • Edge bevel details (polished/rough)
 
-            4. Hinge Mechanism Documentation:
-            - Hinge type identification:
-            • Barrel hinge (number of barrels)
-            • Spring hinge (visible coil mechanism)
-            • Screwless magnetic closure
-            - Component materials (stainless steel, nickel alloy)
-            - Screw characteristics:
-            • Head type (phillips/flat/hex)
-            • Count per hinge
-            • Symmetry between sides
+                4. Hinge Mechanism Documentation:
+                - Hinge type identification:
+                • Barrel hinge (number of barrels)
+                • Spring hinge (visible coil mechanism)
+                • Screwless magnetic closure
+                - Component materials (stainless steel, nickel alloy)
+                - Screw characteristics:
+                • Head type (phillips/flat/hex)
+                • Count per hinge
+                • Symmetry between sides
 
-            5. Measurement Validation:
-            - Verify advertised measurements using visual references:
-            • Bridge width (distance between lenses)
-            • Temple length (from hinge to tip)
-            • Lens height/width ratio
-            - Identify physical measurement markers:
+                5. Measurement Validation:
+                - Verify advertised measurements using visual references:
+                • Bridge width (distance between lenses)
+                • Temple length (from hinge to tip)
+                • Lens height/width ratio
+                - Identify physical measurement markers:
 
-            6. Unique Design Features:
-            - Architectural elements:
-            • Decorative rivets (material/count)
-            • Temple end designs (curved/flat)
-            • Nose pad materials (silicone/acetate)
-            - Functional components:
-            • Adjustable nose pads
-            • Cable temple tips
-            • Hidden spring mechanisms
+                6. Unique Design Features:
+                - Architectural elements:
+                • Decorative rivets (material/count)
+                • Temple end designs (curved/flat)
+                • Nose pad materials (silicone/acetate)
+                - Functional components:
+                • Adjustable nose pads
+                • Cable temple tips
+                • Hidden spring mechanisms
 
-            Format Requirements:
-            - Use precise millimeter measurements
-            - Note left/right orientation
-            - Include RGB color codes where applicable
-            - Specify material PBR values (roughness 0-1 scale)
-            - Maintain technical terminology"""
+                Format Requirements:
+                - Use precise millimeter measurements
+                - Note left/right orientation
+                - Include RGB color codes 
+                - Specify material PBR values (roughness 0-1 scale)
+                - Maintain technical terminology
+
+                very detailed output"""
             
             # Get vision analysis from DeepSeek
             vision_response = await self.llm.ainvoke(
@@ -126,7 +128,7 @@ class PromptGenerator:
         return encoded_images
 
     async def _validate_prompt(self, base_prompt, vision_analysis):
-        validation_prompt = f"""Combine these specifications and visual analysis into a final 3D modeling prompt:
+        validation_prompt = f"""Combine these technical specifications and visual analysis into a production-ready 3D modeling prompt:  
         
         Product Specifications:
         {base_prompt}
@@ -140,7 +142,51 @@ class PromptGenerator:
         3. Details optical properties for lenses
         4. Includes precise mechanical component descriptions
         5. Maintains brand identity elements
+
+        Technical Requirements(example):
+        1. Material Properties:
+        - Specify PBR values: roughness (0.0-1.0), metallic (0.0-1.0)
+        - Detail material layering (acetate core/lamination)
+        - Include surface imperfection maps (micro-scratches, tooling marks)
+
+        2. Geometric Requirements:
+        - Reference both angled (45°) and front (0°) views for:
+        - Bridge curvature radius (±0.2mm tolerance)
+        - Temple arm taper gradient
+        - Lens bevel angle (edge thickness profile)
+        - Maintain inter-pupillary distance alignment between views
+
+        3. Branding Implementation:
+        - Etch "WARBY PARKER" text on left temple:
+        - Position: 10mm from hinge centerpoint
+        - Engraving: 0.3mm depth debossed
+        - Font: Sans-serif, 2.5mm height
+        - Alignment: Follow temple curvature (3° radial offset)
+
+        4. Optical Requirements:
+        - Lens parameters:
+        - Base curve: 4-8 diopter range
+        - Refractive index: 1.50-1.74
+        - ABBE value: ≥30
+        - Edge polish: 0.5mm matte bevel
+
+        5. Mechanical Components:
+        - Hinge specifications:
+        - Barrel count: 3-5 components
+        - Spring tension: 500-700gf
+        - Screw type: M1.4×3mm flathead
+        - Nose pad material: Medical-grade silicone (Shore 50A)
+
+        6. Quality Assurance:
+        - Prevent these artifacts:
+        - Texture UV stretching
+        - Color value mismatches (ΔE < 2.0)
+        - Edge detailing errors (maintain 0.1mm feature resolution)
+        - Surface normal inconsistencies between views
+
+        !!All the above points should be based on the provided Product specifications and visual analysis ONLY!!
         
-        Output ONLY the final prompt with no additional formatting."""
+        Output ONLY the final 3D prompt with no additional formatting.
+        It should also have lines like Create a 3D model of a pair of glasses based on the given specifications and visual analysis of the glasses."""
         
         return await self.llm.ainvoke(validation_prompt)

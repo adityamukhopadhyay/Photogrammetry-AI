@@ -1,6 +1,7 @@
 import fal_client
 import os
 from typing import Dict, Any
+import requests
 import json
 from pathlib import Path
 

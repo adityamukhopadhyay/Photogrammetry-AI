@@ -1,6 +1,7 @@
 from .api_handler import RodinAPI
 from src.utils.logger import configure_logger
 import time
+import fal_client
 
 logger = configure_logger()
 
