@@ -131,7 +131,7 @@ else:
                     
                     Dont get confused with glasses body's color and the color of the lenses.
                     carefully analyze the image and provide the details of the glasses body color and the color of the lenses seperately(because lenses will mostly be transparent like this polycarbonate lenses (refractive index: 1.49) with crystal-clear transparency (0.0 color intensity),).
-
+                    use words like "crystal-clear transparency" when lens is transparent 
                     """
 
     # options = webdriver.ChromeOptions() 
@@ -285,10 +285,6 @@ async def process_with_rodin():
     # Initialize the ModelProcessor and process the product
     processor = ModelProcessor()
     result = processor.process_product(config)
-    print("\nProcessed product:", result)
-
- # Replace with actual product ID if available
-    output_path = processor.api.save_result(result)
-    print(f"Model and textures saved to: {output_path}")
+    print("\nProcessed product at:", result)
 
 asyncio.run(process_with_rodin())

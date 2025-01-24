@@ -18,17 +18,17 @@ class ModelProcessor:
             logger.debug(f"Received handler object: {handler}")
             logger.debug(f"Handler type: {type(handler)}")
             
-            while True:
-                status = handler.status(with_logs=True)
+            # while True:
+            #     status = handler.status(with_logs=True)
                 
-                if isinstance(status, fal_client.InProgress):
-                    for log in status.logs:
-                        logger.info(f"Rodin: {log['message']}")
-                    time.sleep(15)
-                else:
-                    break
+            #     if isinstance(status, fal_client.InProgress):
+            #         for log in status.logs:
+            #             logger.info(f"Rodin: {log['message']}")
+            #         time.sleep(15)
+            #     else:
+            #         break
                     
-            result = handler.result()
+            result = handler['model_mesh']['url']
             
             logger.info("Received result from Rodin API")
             logger.debug(f"Result structure: {result}")
@@ -49,4 +49,23 @@ class ModelProcessor:
             
         except Exception as e:
             logger.error(f"Processing failed: {str(e)}")
-            raise
+            # Download the model using the link
+            try:
+                logger.info("Attempting to download the model directly")
+                print("Attempting to download the model directly")
+                response = requests.get(result)
+                response.raise_for_status()
+                
+                # Save the model to a file
+                model_path = "data/3d_models/model.glb"
+                with open(model_path, "wb") as f:
+                    f.write(response.content)
+                logger.info(f"Successfully downloaded and saved model to {model_path}")
+                print(f"Successfully downloaded and saved model to {model_path}")
+                
+                return model_path
+            
+            except requests.RequestException as e:
+                logger.error(f"Failed to download model: {str(e)}")
+                print(f"Failed to download model: {str(e)}")
+                raise

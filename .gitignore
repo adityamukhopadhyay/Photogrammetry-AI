@@ -4,4 +4,4 @@ __pycache__/
 *.pyc
 *.json
 *.txt
-*.glb
+*.glb.env

@@ -210,6 +210,8 @@ class PromptGenerator:
         and if glass lens is transparent, then the color intensity should be 0.0(example prompt could be: 'Model the lens as clear polycarbonate with anti-reflective and scratch-resistant coatings, ensuring full UV protection. Set transparency and reflectivity to represent these optical properties accurately.' )
         make sure i dont get opaque lens in the 3D model whatsover, it should be transparent and clear lens.
         !!keywords: ULTRA-PRECISE 3D EYEWEAR MODEL - CRYSTAL CLEAR LENSES REQUIRED.!!
-        lines like these 'Use polycarbonate lenses (refractive index: 1.49) with crystal-clear transparency (0.0 color intensity)'"""
+        lines like these 'Use polycarbonate lenses (refractive index: 1.49) with crystal-clear transparency (0.0 color intensity)
+        MANDATORY USE WORDS: like "crystal-clear transparency" when lens is transparent 
+'"""
         
         return await self.llm.ainvoke(validation_prompt)
