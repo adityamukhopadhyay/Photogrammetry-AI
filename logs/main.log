@@ -1,1380 +1,169 @@
-2025-01-22 23:50:14 - file_logger - INFO - Application started
-2025-01-22 23:50:26 - file_logger - INFO - DeepSeek client initialized with API key
-2025-01-22 23:50:37 - file_logger - DEBUG - Starting API request preparation
-2025-01-22 23:50:37 - file_logger - INFO - Sending text-only request to model deepseek-chat
-2025-01-22 23:50:37 - file_logger - DEBUG - Request payload preview:
-Extract and structure ONLY the following information from the product description:
-
-        Required Information:
-        1. Frame Material (composition and finish):
-        2. Lens Type (material and...
-2025-01-22 23:50:39 - file_logger - ERROR - API request failed: Error code: 402 - {'error': {'message': 'Insufficient Balance', 'type': 'unknown_error', 'param': None, 'code': 'invalid_request_error'}}
-2025-01-22 23:50:39 - file_logger - DEBUG - Error details: {'request': <Request('POST', 'https://api.deepseek.com/chat/completions')>, 'message': "Error code: 402 - {'error': {'message': 'Insufficient Balance', 'type': 'unknown_error', 'param': None, 'code': 'invalid_request_error'}}", 'body': {'message': 'Insufficient Balance', 'type': 'unknown_error', 'param': None, 'code': 'invalid_request_error'}, 'code': 'invalid_request_error', 'param': None, 'type': 'unknown_error', 'response': <Response [402 Payment Required]>, 'status_code': 402, 'request_id': None}
-2025-01-23 03:27:30 - file_logger - INFO - Application started
-2025-01-23 03:27:42 - file_logger - INFO - DeepSeek client initialized with API key
-2025-01-23 03:28:09 - file_logger - DEBUG - Starting API request preparation
-2025-01-23 03:28:09 - file_logger - INFO - Sending text-only request to model deepseek-chat
-2025-01-23 03:28:09 - file_logger - DEBUG - Request payload preview:
+2025-01-24 16:29:25 - file_logger - INFO - DeepSeek client initialized with API key
+2025-01-24 16:29:50 - file_logger - DEBUG - Starting API request preparation
+2025-01-24 16:29:50 - file_logger - INFO - Sending text-only request to model deepseek-reasoner
+2025-01-24 16:29:50 - file_logger - DEBUG - Request payload preview:
 Extract and structure ONLY the following information from the product description:
 
         Required Information(if available):
         1. Frame Material (composition and finish):
         2. Lens Type...
-2025-01-23 03:28:14 - file_logger - SUCCESS - API request completed successfully
-2025-01-23 03:28:14 - file_logger - DEBUG - Response metadata: Tokens used - 1888 (Prompt: 1744, Completion: 144)
-2025-01-23 03:28:14 - file_logger - DEBUG - Response content preview:
+2025-01-24 16:30:16 - file_logger - SUCCESS - API request completed successfully
+2025-01-24 16:30:16 - file_logger - DEBUG - Response metadata: Tokens used - 3134 (Prompt: 1763, Completion: 1371)
+2025-01-24 16:30:16 - file_logger - DEBUG - Response content preview:
 ```json
 {
   "material": "hand-polished cellulose acetate",
-  "lens_type": "Polycarbonate",
+  "lens_type": "Polycarbonate lenses (impact-resistant, anti-reflective, scratch-resistant, 100% UV protection)",
   "measurements": {
-    "Medium": 134,
-    "Wide": 138,
-    "Medium Wide": 134
-  },
-  "branding": [
-    "Grad...
-2025-01-23 03:30:49 - file_logger - INFO - Application started
-2025-01-23 03:30:53 - file_logger - INFO - DeepSeek client initialized with API key
-2025-01-23 03:31:09 - file_logger - DEBUG - Starting API request preparation
-2025-01-23 03:31:09 - file_logger - INFO - Sending text-only request to model deepseek-chat
-2025-01-23 03:31:09 - file_logger - DEBUG - Request payload preview:
-Extract and structure ONLY the following information from the product description:
-
-        Required Information(if available):
-        1. Frame Material (composition and finish):
-        2. Lens Type...
-2025-01-23 03:31:14 - file_logger - SUCCESS - API request completed successfully
-2025-01-23 03:31:14 - file_logger - DEBUG - Response metadata: Tokens used - 1891 (Prompt: 1759, Completion: 132)
-2025-01-23 03:31:14 - file_logger - DEBUG - Response content preview:
-```json
-{
-  "material": "hand-polished cellulose acetate",
-  "lens_type": "Polycarbonate",
-  "measurements": {
-    "Medium": 134,
-    "Wide": 138,
-    "Medium Wide": 134
-  },
-  "branding": [
-    "Grad...
-2025-01-23 03:37:00 - file_logger - INFO - Application started
-2025-01-23 03:37:15 - file_logger - INFO - DeepSeek client initialized with API key
-2025-01-23 03:37:41 - file_logger - DEBUG - Starting API request preparation
-2025-01-23 03:37:41 - file_logger - INFO - Sending text-only request to model deepseek-chat
-2025-01-23 03:37:41 - file_logger - DEBUG - Request payload preview:
-Extract and structure ONLY the following information from the product description:
-
-        Required Information(if available):
-        1. Frame Material (composition and finish):
-        2. Lens Type...
-2025-01-23 03:37:46 - file_logger - SUCCESS - API request completed successfully
-2025-01-23 03:37:46 - file_logger - DEBUG - Response metadata: Tokens used - 1890 (Prompt: 1759, Completion: 131)
-2025-01-23 03:37:46 - file_logger - DEBUG - Response content preview:
-```json
-{
-  "material": "hand-polished cellulose acetate",
-  "lens_type": "Polycarbonate",
-  "measurements": {
-    "Medium": 134,
-    "Wide": 138,
-    "Medium Wide": 134
-  },
-  "branding": [
-    "Grad...
-2025-01-23 03:42:02 - file_logger - INFO - Application started
-2025-01-23 03:42:11 - file_logger - INFO - DeepSeek client initialized with API key
-2025-01-23 03:42:32 - file_logger - DEBUG - Starting API request preparation
-2025-01-23 03:42:32 - file_logger - INFO - Sending text-only request to model deepseek-chat
-2025-01-23 03:42:32 - file_logger - DEBUG - Request payload preview:
-Extract and structure ONLY the following information from the product description:
-
-        Required Information(if available):
-        1. Frame Material (composition and finish):
-        2. Lens Type...
-2025-01-23 03:42:37 - file_logger - SUCCESS - API request completed successfully
-2025-01-23 03:42:37 - file_logger - DEBUG - Response metadata: Tokens used - 1891 (Prompt: 1759, Completion: 132)
-2025-01-23 03:42:37 - file_logger - DEBUG - Response content preview:
-```json
-{
-  "material": "hand-polished cellulose acetate",
-  "lens_type": "Polycarbonate",
-  "measurements": {
-    "Medium": 134,
-    "Wide": 138,
-    "Medium Wide": 134
-  },
-  "branding": [
-    "Grad...
-2025-01-23 03:42:37 - file_logger - ERROR - Prompt generation failed: DeepSeekClient.ainvoke() got an unexpected keyword argument 'image_urls'
-2025-01-23 03:57:24 - file_logger - INFO - DeepSeek client initialized with API key
-2025-01-23 03:57:57 - file_logger - DEBUG - Starting API request preparation
-2025-01-23 03:57:57 - file_logger - INFO - Sending text-only request to model deepseek-chat
-2025-01-23 03:57:57 - file_logger - DEBUG - Request payload preview:
-Extract and structure ONLY the following information from the product description:
-
-        Required Information(if available):
-        1. Frame Material (composition and finish):
-        2. Lens Type...
-2025-01-23 03:58:01 - file_logger - SUCCESS - API request completed successfully
-2025-01-23 03:58:01 - file_logger - DEBUG - Response metadata: Tokens used - 1886 (Prompt: 1742, Completion: 144)
-2025-01-23 03:58:01 - file_logger - DEBUG - Response content preview:
-```json
-{
-  "material": "hand-polished cellulose acetate",
-  "lens_type": "Polycarbonate",
-  "measurements": {
-    "Medium": 134,
-    "Wide": 138,
-    "Medium Wide": 134
-  },
-  "branding": [
-    "Grad...
-2025-01-23 04:14:17 - file_logger - INFO - DeepSeek client initialized with API key
-2025-01-23 04:14:47 - file_logger - DEBUG - Starting API request preparation
-2025-01-23 04:14:47 - file_logger - INFO - Sending text-only request to model deepseek-chat
-2025-01-23 04:14:47 - file_logger - DEBUG - Request payload preview:
-Extract and structure ONLY the following information from the product description:
-
-        Required Information(if available):
-        1. Frame Material (composition and finish):
-        2. Lens Type...
-2025-01-23 04:14:51 - file_logger - SUCCESS - API request completed successfully
-2025-01-23 04:14:51 - file_logger - DEBUG - Response metadata: Tokens used - 1893 (Prompt: 1760, Completion: 133)
-2025-01-23 04:14:51 - file_logger - DEBUG - Response content preview:
-```json
-{
-  "material": "hand-polished cellulose acetate",
-  "lens_type": "Polycarbonate lenses",
-  "measurements": {
-    "Medium": 134,
-    "Wide": 138,
-    "Medium Wide": 134
-  },
-  "branding": [
-  ...
-2025-01-23 13:58:10 - file_logger - INFO - DeepSeek client initialized with API key
-2025-01-23 14:00:30 - file_logger - INFO - DeepSeek client initialized with API key
-2025-01-23 14:01:24 - file_logger - DEBUG - Starting API request preparation
-2025-01-23 14:01:24 - file_logger - INFO - Sending text-only request to model deepseek-chat
-2025-01-23 14:01:24 - file_logger - DEBUG - Request payload preview:
-Extract and structure ONLY the following information from the product description:
-
-        Required Information(if available):
-        1. Frame Material (composition and finish):
-        2. Lens Type...
-2025-01-23 14:01:28 - file_logger - SUCCESS - API request completed successfully
-2025-01-23 14:01:28 - file_logger - DEBUG - Response metadata: Tokens used - 1889 (Prompt: 1745, Completion: 144)
-2025-01-23 14:01:28 - file_logger - DEBUG - Response content preview:
-```json
-{
-  "material": "hand-polished cellulose acetate",
-  "lens_type": "Polycarbonate",
-  "measurements": {
-    "Medium": 134,
-    "Wide": 138,
-    "Medium Wide": 134
-  },
-  "branding": [
-    "Grad...
-2025-01-23 14:04:03 - file_logger - INFO - DeepSeek client initialized with API key
-2025-01-23 14:05:41 - file_logger - INFO - DeepSeek client initialized with API key
-2025-01-23 14:07:34 - file_logger - INFO - DeepSeek client initialized with API key
-2025-01-23 14:10:00 - file_logger - INFO - DeepSeek client initialized with API key
-2025-01-23 14:11:30 - file_logger - INFO - DeepSeek client initialized with API key
-2025-01-23 14:14:54 - file_logger - INFO - DeepSeek client initialized with API key
-2025-01-23 14:15:50 - file_logger - DEBUG - Starting API request preparation
-2025-01-23 14:15:50 - file_logger - INFO - Sending text-only request to model deepseek-chat
-2025-01-23 14:15:50 - file_logger - DEBUG - Request payload preview:
-Extract and structure ONLY the following information from the product description:
-
-        Required Information(if available):
-        1. Frame Material (composition and finish):
-        2. Lens Type...
-2025-01-23 14:15:55 - file_logger - SUCCESS - API request completed successfully
-2025-01-23 14:15:55 - file_logger - DEBUG - Response metadata: Tokens used - 1905 (Prompt: 1761, Completion: 144)
-2025-01-23 14:15:55 - file_logger - DEBUG - Response content preview:
-```json
-{
-  "material": "hand-polished cellulose acetate",
-  "lens_type": "Polycarbonate",
-  "measurements": {
-    "Medium": 134,
-    "Wide": 138,
-    "Medium Wide": 134
-  },
-  "branding": [
-    "Grad...
-2025-01-23 14:16:51 - file_logger - INFO - DeepSeek client initialized with API key
-2025-01-23 14:18:33 - file_logger - INFO - DeepSeek client initialized with API key
-2025-01-23 14:19:19 - file_logger - DEBUG - Starting API request preparation
-2025-01-23 14:19:19 - file_logger - INFO - Sending text-only request to model deepseek-chat
-2025-01-23 14:19:19 - file_logger - DEBUG - Request payload preview:
-Extract and structure ONLY the following information from the product description:
-
-        Required Information(if available):
-        1. Frame Material (composition and finish):
-        2. Lens Type...
-2025-01-23 14:19:24 - file_logger - SUCCESS - API request completed successfully
-2025-01-23 14:19:24 - file_logger - DEBUG - Response metadata: Tokens used - 1886 (Prompt: 1742, Completion: 144)
-2025-01-23 14:19:24 - file_logger - DEBUG - Response content preview:
-```json
-{
-  "material": "hand-polished cellulose acetate",
-  "lens_type": "Polycarbonate",
-  "measurements": {
-    "Medium": 134,
-    "Wide": 138,
-    "Medium Wide": 134
-  },
-  "branding": [
-    "Grad...
-2025-01-23 14:22:37 - file_logger - INFO - DeepSeek client initialized with API key
-2025-01-23 14:23:33 - file_logger - DEBUG - Starting API request preparation
-2025-01-23 14:23:33 - file_logger - INFO - Sending text-only request to model deepseek-chat
-2025-01-23 14:23:33 - file_logger - DEBUG - Request payload preview:
-Extract and structure ONLY the following information from the product description:
-
-        Required Information(if available):
-        1. Frame Material (composition and finish):
-        2. Lens Type...
-2025-01-23 14:23:38 - file_logger - SUCCESS - API request completed successfully
-2025-01-23 14:23:38 - file_logger - DEBUG - Response metadata: Tokens used - 1907 (Prompt: 1761, Completion: 146)
-2025-01-23 14:23:38 - file_logger - DEBUG - Response content preview:
-```json
-{
-  "material": "hand-polished cellulose acetate",
-  "lens_type": "Polycarbonate",
-  "measurements": {
-    "Medium": 134,
-    "Wide": 138,
-    "Medium Wide": 134
-  },
-  "branding": [
-    "Grad...
-2025-01-23 16:47:49 - file_logger - INFO - DeepSeek client initialized with API key
-2025-01-23 16:55:33 - file_logger - INFO - DeepSeek client initialized with API key
-2025-01-23 16:56:20 - file_logger - DEBUG - Starting API request preparation
-2025-01-23 16:56:20 - file_logger - INFO - Sending text-only request to model deepseek-chat
-2025-01-23 16:56:20 - file_logger - DEBUG - Request payload preview:
-Extract and structure ONLY the following information from the product description:
-
-        Required Information(if available):
-        1. Frame Material (composition and finish):
-        2. Lens Type...
-2025-01-23 16:56:26 - file_logger - SUCCESS - API request completed successfully
-2025-01-23 16:56:26 - file_logger - DEBUG - Response metadata: Tokens used - 1892 (Prompt: 1760, Completion: 132)
-2025-01-23 16:56:26 - file_logger - DEBUG - Response content preview:
-```json
-{
-  "material": "hand-polished cellulose acetate",
-  "lens_type": "Polycarbonate",
-  "measurements": {
-    "Medium": 134,
-    "Wide": 138,
-    "Medium Wide": 134
-  },
-  "branding": [
-    "Grad...
-2025-01-23 17:04:57 - file_logger - INFO - DeepSeek client initialized with API key
-2025-01-23 17:05:17 - file_logger - DEBUG - Starting API request preparation
-2025-01-23 17:05:17 - file_logger - INFO - Sending text-only request to model deepseek-chat
-2025-01-23 17:05:17 - file_logger - DEBUG - Request payload preview:
-Extract and structure ONLY the following information from the product description:
-
-        Required Information(if available):
-        1. Frame Material (composition and finish):
-        2. Lens Type...
-2025-01-23 17:05:27 - file_logger - SUCCESS - API request completed successfully
-2025-01-23 17:05:27 - file_logger - DEBUG - Response metadata: Tokens used - 1898 (Prompt: 1754, Completion: 144)
-2025-01-23 17:05:27 - file_logger - DEBUG - Response content preview:
-```json
-{
-  "material": "hand-polished cellulose acetate",
-  "lens_type": "Polycarbonate",
-  "measurements": {
-    "Medium": 134,
-    "Wide": 138,
-    "Medium Wide": 134
-  },
-  "branding": [
-    "Grad...
-2025-01-23 21:17:52 - file_logger - INFO - DeepSeek client initialized with API key
-2025-01-23 21:18:15 - file_logger - DEBUG - Starting API request preparation
-2025-01-23 21:18:15 - file_logger - INFO - Sending text-only request to model deepseek-chat
-2025-01-23 21:18:15 - file_logger - DEBUG - Request payload preview:
-Extract and structure ONLY the following information from the product description:
-
-        Required Information(if available):
-        1. Frame Material (composition and finish):
-        2. Lens Type...
-2025-01-23 21:18:20 - file_logger - SUCCESS - API request completed successfully
-2025-01-23 21:18:20 - file_logger - DEBUG - Response metadata: Tokens used - 1913 (Prompt: 1767, Completion: 146)
-2025-01-23 21:18:20 - file_logger - DEBUG - Response content preview:
-```json
-{
-  "material": "hand-polished cellulose acetate",
-  "lens_type": "Polycarbonate",
-  "measurements": {
-    "Medium": 134,
-    "Wide": 138,
-    "Medium Wide": 134
-  },
-  "branding": [
-    "Grad...
-2025-01-23 21:22:18 - file_logger - INFO - DeepSeek client initialized with API key
-2025-01-23 21:22:40 - file_logger - DEBUG - Starting API request preparation
-2025-01-23 21:22:40 - file_logger - INFO - Sending text-only request to model deepseek-chat
-2025-01-23 21:22:40 - file_logger - DEBUG - Request payload preview:
-Extract and structure ONLY the following information from the product description:
-
-        Required Information(if available):
-        1. Frame Material (composition and finish):
-        2. Lens Type...
-2025-01-23 21:22:45 - file_logger - SUCCESS - API request completed successfully
-2025-01-23 21:22:45 - file_logger - DEBUG - Response metadata: Tokens used - 1916 (Prompt: 1770, Completion: 146)
-2025-01-23 21:22:45 - file_logger - DEBUG - Response content preview:
-```json
-{
-  "material": "hand-polished cellulose acetate",
-  "lens_type": "Polycarbonate",
-  "measurements": {
-    "Medium": 134,
-    "Wide": 138,
-    "Medium Wide": 134
-  },
-  "branding": [
-    "Grad...
-2025-01-23 21:36:11 - file_logger - INFO - DeepSeek client initialized with API key
-2025-01-23 21:36:33 - file_logger - DEBUG - Starting API request preparation
-2025-01-23 21:36:33 - file_logger - INFO - Sending text-only request to model deepseek-chat
-2025-01-23 21:36:33 - file_logger - DEBUG - Request payload preview:
-Extract and structure ONLY the following information from the product description:
-
-        Required Information(if available):
-        1. Frame Material (composition and finish):
-        2. Lens Type...
-2025-01-23 21:36:38 - file_logger - SUCCESS - API request completed successfully
-2025-01-23 21:36:38 - file_logger - DEBUG - Response metadata: Tokens used - 1917 (Prompt: 1771, Completion: 146)
-2025-01-23 21:36:38 - file_logger - DEBUG - Response content preview:
-```json
-{
-  "material": "hand-polished cellulose acetate",
-  "lens_type": "Polycarbonate",
-  "measurements": {
-    "Medium": 134,
-    "Wide": 138,
-    "Medium Wide": 134
-  },
-  "branding": [
-    "Grad...
-2025-01-23 21:37:34 - file_logger - INFO - DeepSeek client initialized with API key
-2025-01-23 21:37:54 - file_logger - DEBUG - Starting API request preparation
-2025-01-23 21:37:54 - file_logger - INFO - Sending text-only request to model deepseek-chat
-2025-01-23 21:37:54 - file_logger - DEBUG - Request payload preview:
-Extract and structure ONLY the following information from the product description:
-
-        Required Information(if available):
-        1. Frame Material (composition and finish):
-        2. Lens Type...
-2025-01-23 21:37:58 - file_logger - SUCCESS - API request completed successfully
-2025-01-23 21:37:58 - file_logger - DEBUG - Response metadata: Tokens used - 1887 (Prompt: 1757, Completion: 130)
-2025-01-23 21:37:58 - file_logger - DEBUG - Response content preview:
-```json
-{
-  "material": "hand-polished cellulose acetate",
-  "lens_type": "Polycarbonate",
-  "measurements": {
-    "Medium": 134,
-    "Wide": 138,
-    "Medium Wide": 134
-  },
-  "branding": [
-    "Grad...
-2025-01-23 21:38:43 - file_logger - INFO - DeepSeek client initialized with API key
-2025-01-23 21:39:02 - file_logger - DEBUG - Starting API request preparation
-2025-01-23 21:39:02 - file_logger - INFO - Sending text-only request to model deepseek-chat
-2025-01-23 21:39:02 - file_logger - DEBUG - Request payload preview:
-Extract and structure ONLY the following information from the product description:
-
-        Required Information(if available):
-        1. Frame Material (composition and finish):
-        2. Lens Type...
-2025-01-23 21:39:06 - file_logger - SUCCESS - API request completed successfully
-2025-01-23 21:39:06 - file_logger - DEBUG - Response metadata: Tokens used - 1903 (Prompt: 1771, Completion: 132)
-2025-01-23 21:39:06 - file_logger - DEBUG - Response content preview:
-```json
-{
-  "material": "hand-polished cellulose acetate",
-  "lens_type": "Polycarbonate",
-  "measurements": {
-    "Medium": 134,
-    "Wide": 138,
-    "Medium Wide": 134
-  },
-  "branding": [
-    "Grad...
-2025-01-23 21:40:14 - file_logger - INFO - DeepSeek client initialized with API key
-2025-01-23 21:40:27 - file_logger - DEBUG - Starting API request preparation
-2025-01-23 21:40:27 - file_logger - INFO - Sending text-only request to model deepseek-chat
-2025-01-23 21:40:27 - file_logger - DEBUG - Request payload preview:
-Extract and structure ONLY the following information from the product description:
-
-        Required Information(if available):
-        1. Frame Material (composition and finish):
-        2. Lens Type...
-2025-01-23 21:40:32 - file_logger - SUCCESS - API request completed successfully
-2025-01-23 21:40:32 - file_logger - DEBUG - Response metadata: Tokens used - 1901 (Prompt: 1757, Completion: 144)
-2025-01-23 21:40:32 - file_logger - DEBUG - Response content preview:
-```json
-{
-  "material": "hand-polished cellulose acetate",
-  "lens_type": "Polycarbonate",
-  "measurements": {
-    "Medium": 134,
-    "Wide": 138,
-    "Medium Wide": 134
-  },
-  "branding": [
-    "Grad...
-2025-01-23 21:43:34 - file_logger - INFO - DeepSeek client initialized with API key
-2025-01-23 21:43:50 - file_logger - DEBUG - Starting API request preparation
-2025-01-23 21:43:50 - file_logger - INFO - Sending text-only request to model deepseek-chat
-2025-01-23 21:43:50 - file_logger - DEBUG - Request payload preview:
-Extract and structure ONLY the following information from the product description:
-
-        Required Information(if available):
-        1. Frame Material (composition and finish):
-        2. Lens Type...
-2025-01-23 21:43:54 - file_logger - SUCCESS - API request completed successfully
-2025-01-23 21:43:54 - file_logger - DEBUG - Response metadata: Tokens used - 1902 (Prompt: 1758, Completion: 144)
-2025-01-23 21:43:54 - file_logger - DEBUG - Response content preview:
-```json
-{
-  "material": "hand-polished cellulose acetate",
-  "lens_type": "Polycarbonate",
-  "measurements": {
-    "Medium": 134,
-    "Wide": 138,
-    "Medium Wide": 134
-  },
-  "branding": [
-    "Grad...
-2025-01-23 21:46:27 - file_logger - INFO - DeepSeek client initialized with API key
-2025-01-23 21:46:44 - file_logger - DEBUG - Starting API request preparation
-2025-01-23 21:46:44 - file_logger - INFO - Sending text-only request to model deepseek-chat
-2025-01-23 21:46:44 - file_logger - DEBUG - Request payload preview:
-Extract and structure ONLY the following information from the product description:
-
-        Required Information(if available):
-        1. Frame Material (composition and finish):
-        2. Lens Type...
-2025-01-23 21:46:48 - file_logger - SUCCESS - API request completed successfully
-2025-01-23 21:46:48 - file_logger - DEBUG - Response metadata: Tokens used - 1905 (Prompt: 1772, Completion: 133)
-2025-01-23 21:46:48 - file_logger - DEBUG - Response content preview:
-```json
-{
-  "material": "hand-polished cellulose acetate",
-  "lens_type": "Polycarbonate lenses",
-  "measurements": {
-    "Medium": 134,
-    "Wide": 138,
-    "Medium Wide": 134
-  },
-  "branding": [
-  ...
-2025-01-23 21:56:56 - file_logger - INFO - DeepSeek client initialized with API key
-2025-01-23 21:57:15 - file_logger - DEBUG - Starting API request preparation
-2025-01-23 21:57:15 - file_logger - INFO - Sending text-only request to model deepseek-chat
-2025-01-23 21:57:15 - file_logger - DEBUG - Request payload preview:
-Extract and structure ONLY the following information from the product description:
-
-        Required Information(if available):
-        1. Frame Material (composition and finish):
-        2. Lens Type...
-2025-01-23 21:57:19 - file_logger - SUCCESS - API request completed successfully
-2025-01-23 21:57:19 - file_logger - DEBUG - Response metadata: Tokens used - 1905 (Prompt: 1772, Completion: 133)
-2025-01-23 21:57:19 - file_logger - DEBUG - Response content preview:
-```json
-{
-  "material": "hand-polished cellulose acetate",
-  "lens_type": "Polycarbonate lenses",
-  "measurements": {
-    "Medium": 134,
-    "Wide": 138,
-    "Medium Wide": 134
-  },
-  "branding": [
-  ...
-2025-01-23 21:58:02 - file_logger - INFO - DeepSeek client initialized with API key
-2025-01-23 21:58:14 - file_logger - DEBUG - Starting API request preparation
-2025-01-23 21:58:14 - file_logger - INFO - Sending text-only request to model deepseek-chat
-2025-01-23 21:58:14 - file_logger - DEBUG - Request payload preview:
-Extract and structure ONLY the following information from the product description:
-
-        Required Information(if available):
-        1. Frame Material (composition and finish):
-        2. Lens Type...
-2025-01-23 21:58:18 - file_logger - SUCCESS - API request completed successfully
-2025-01-23 21:58:18 - file_logger - DEBUG - Response metadata: Tokens used - 1918 (Prompt: 1772, Completion: 146)
-2025-01-23 21:58:18 - file_logger - DEBUG - Response content preview:
-```json
-{
-  "material": "hand-polished cellulose acetate",
-  "lens_type": "Polycarbonate",
-  "measurements": {
-    "Medium": 134,
-    "Wide": 138,
-    "Medium Wide": 134
-  },
-  "branding": [
-    "Grad...
-2025-01-23 22:00:36 - file_logger - INFO - DeepSeek client initialized with API key
-2025-01-23 22:01:17 - file_logger - DEBUG - Starting API request preparation
-2025-01-23 22:01:17 - file_logger - INFO - Sending text-only request to model deepseek-chat
-2025-01-23 22:01:17 - file_logger - DEBUG - Request payload preview:
-Extract and structure ONLY the following information from the product description:
-
-        Required Information(if available):
-        1. Frame Material (composition and finish):
-        2. Lens Type...
-2025-01-23 22:01:23 - file_logger - SUCCESS - API request completed successfully
-2025-01-23 22:01:23 - file_logger - DEBUG - Response metadata: Tokens used - 1901 (Prompt: 1757, Completion: 144)
-2025-01-23 22:01:23 - file_logger - DEBUG - Response content preview:
-```json
-{
-  "material": "hand-polished cellulose acetate",
-  "lens_type": "Polycarbonate",
-  "measurements": {
-    "Medium": 134,
-    "Wide": 138,
-    "Medium Wide": 134
-  },
-  "branding": [
-    "Grad...
-2025-01-23 22:18:33 - file_logger - INFO - DeepSeek client initialized with API key
-2025-01-23 22:19:23 - file_logger - DEBUG - Starting API request preparation
-2025-01-23 22:19:23 - file_logger - INFO - Sending text-only request to model deepseek-chat
-2025-01-23 22:19:23 - file_logger - DEBUG - Request payload preview:
-Extract and structure ONLY the following information from the product description:
-
-        Required Information(if available):
-        1. Frame Material (composition and finish):
-        2. Lens Type...
-2025-01-23 22:19:28 - file_logger - SUCCESS - API request completed successfully
-2025-01-23 22:19:28 - file_logger - DEBUG - Response metadata: Tokens used - 1893 (Prompt: 1749, Completion: 144)
-2025-01-23 22:19:28 - file_logger - DEBUG - Response content preview:
-```json
-{
-  "material": "hand-polished cellulose acetate",
-  "lens_type": "Polycarbonate",
-  "measurements": {
-    "Medium": 134,
-    "Wide": 138,
-    "Medium Wide": 134
-  },
-  "branding": [
-    "Grad...
-2025-01-23 22:23:09 - file_logger - INFO - DeepSeek client initialized with API key
-2025-01-23 22:25:04 - file_logger - INFO - DeepSeek client initialized with API key
-2025-01-23 22:26:53 - file_logger - INFO - DeepSeek client initialized with API key
-2025-01-23 22:27:05 - file_logger - DEBUG - Starting API request preparation
-2025-01-23 22:27:05 - file_logger - INFO - Sending text-only request to model deepseek-chat
-2025-01-23 22:27:05 - file_logger - DEBUG - Request payload preview:
-Extract and structure ONLY the following information from the product description:
-
-        Required Information(if available):
-        1. Frame Material (composition and finish):
-        2. Lens Type...
-2025-01-23 22:27:12 - file_logger - SUCCESS - API request completed successfully
-2025-01-23 22:27:12 - file_logger - DEBUG - Response metadata: Tokens used - 2311 (Prompt: 2167, Completion: 144)
-2025-01-23 22:27:12 - file_logger - DEBUG - Response content preview:
-```json
-{
-  "material": "hand-polished cellulose acetate",
-  "lens_type": "Polycarbonate",
-  "measurements": {
-    "Medium": 134,
-    "Wide": 138,
-    "Medium Wide": 134
-  },
-  "branding": [
-    "Grad...
-2025-01-23 22:27:35 - file_logger - INFO - DeepSeek client initialized with API key
-2025-01-23 22:38:01 - file_logger - INFO - DeepSeek client initialized with API key
-2025-01-23 22:38:23 - file_logger - DEBUG - Starting API request preparation
-2025-01-23 22:38:23 - file_logger - INFO - Sending text-only request to model deepseek-chat
-2025-01-23 22:38:23 - file_logger - DEBUG - Request payload preview:
-Extract and structure ONLY the following information from the product description:
-
-        Required Information(if available):
-        1. Frame Material (composition and finish):
-        2. Lens Type...
-2025-01-23 22:38:28 - file_logger - SUCCESS - API request completed successfully
-2025-01-23 22:38:28 - file_logger - DEBUG - Response metadata: Tokens used - 1899 (Prompt: 1755, Completion: 144)
-2025-01-23 22:38:28 - file_logger - DEBUG - Response content preview:
-```json
-{
-  "material": "hand-polished cellulose acetate",
-  "lens_type": "Polycarbonate",
-  "measurements": {
-    "Medium": 134,
-    "Wide": 138,
-    "Medium Wide": 134
-  },
-  "branding": [
-    "Grad...
-2025-01-23 23:01:34 - file_logger - INFO - DeepSeek client initialized with API key
-2025-01-23 23:01:47 - file_logger - DEBUG - Starting API request preparation
-2025-01-23 23:01:47 - file_logger - INFO - Sending text-only request to model deepseek-chat
-2025-01-23 23:01:47 - file_logger - DEBUG - Request payload preview:
-Extract and structure ONLY the following information from the product description:
-
-        Required Information(if available):
-        1. Frame Material (composition and finish):
-        2. Lens Type...
-2025-01-23 23:01:51 - file_logger - SUCCESS - API request completed successfully
-2025-01-23 23:01:51 - file_logger - DEBUG - Response metadata: Tokens used - 1899 (Prompt: 1753, Completion: 146)
-2025-01-23 23:01:51 - file_logger - DEBUG - Response content preview:
-```json
-{
-  "material": "hand-polished cellulose acetate",
-  "lens_type": "Polycarbonate",
-  "measurements": {
-    "Medium": 134,
-    "Wide": 138,
-    "Medium Wide": 134
-  },
-  "branding": [
-    "Grad...
-2025-01-23 23:18:03 - file_logger - INFO - DeepSeek client initialized with API key
-2025-01-23 23:18:16 - file_logger - DEBUG - Starting API request preparation
-2025-01-23 23:18:16 - file_logger - INFO - Sending text-only request to model deepseek-chat
-2025-01-23 23:18:16 - file_logger - DEBUG - Request payload preview:
-Extract and structure ONLY the following information from the product description:
-
-        Required Information(if available):
-        1. Frame Material (composition and finish):
-        2. Lens Type...
-2025-01-23 23:18:22 - file_logger - SUCCESS - API request completed successfully
-2025-01-23 23:18:22 - file_logger - DEBUG - Response metadata: Tokens used - 1903 (Prompt: 1771, Completion: 132)
-2025-01-23 23:18:22 - file_logger - DEBUG - Response content preview:
-```json
-{
-  "material": "hand-polished cellulose acetate",
-  "lens_type": "Polycarbonate",
-  "measurements": {
-    "Medium": 134,
-    "Wide": 138,
-    "Medium Wide": 134
-  },
-  "branding": [
-    "Grad...
-2025-01-23 23:27:11 - file_logger - INFO - DeepSeek client initialized with API key
-2025-01-23 23:27:26 - file_logger - DEBUG - Starting API request preparation
-2025-01-23 23:27:26 - file_logger - INFO - Sending text-only request to model deepseek-chat
-2025-01-23 23:27:26 - file_logger - DEBUG - Request payload preview:
-Extract and structure ONLY the following information from the product description:
-
-        Required Information(if available):
-        1. Frame Material (composition and finish):
-        2. Lens Type...
-2025-01-23 23:27:31 - file_logger - SUCCESS - API request completed successfully
-2025-01-23 23:27:31 - file_logger - DEBUG - Response metadata: Tokens used - 1903 (Prompt: 1759, Completion: 144)
-2025-01-23 23:27:31 - file_logger - DEBUG - Response content preview:
-```json
-{
-  "material": "hand-polished cellulose acetate",
-  "lens_type": "Polycarbonate",
-  "measurements": {
-    "Medium": 134,
-    "Wide": 138,
-    "Medium Wide": 134
-  },
-  "branding": [
-    "Grad...
-2025-01-23 23:28:48 - file_logger - INFO - DeepSeek client initialized with API key
-2025-01-23 23:29:05 - file_logger - DEBUG - Starting API request preparation
-2025-01-23 23:29:05 - file_logger - INFO - Sending text-only request to model deepseek-chat
-2025-01-23 23:29:05 - file_logger - DEBUG - Request payload preview:
-Extract and structure ONLY the following information from the product description:
-
-        Required Information(if available):
-        1. Frame Material (composition and finish):
-        2. Lens Type...
-2025-01-23 23:29:09 - file_logger - SUCCESS - API request completed successfully
-2025-01-23 23:29:09 - file_logger - DEBUG - Response metadata: Tokens used - 1104 (Prompt: 1033, Completion: 71)
-2025-01-23 23:29:09 - file_logger - DEBUG - Response content preview:
-```json
-{
-  "material": "Black Walnut",
-  "lens_type": "Not specified",
-  "measurements": {},
-  "branding": [],
-  "features": [],
-  "roughness": 0.4,
-  "metallic": 0.0,
-  "ior": 1.49
-}
-```...
-2025-01-23 23:31:47 - file_logger - INFO - DeepSeek client initialized with API key
-2025-01-23 23:32:01 - file_logger - DEBUG - Starting API request preparation
-2025-01-23 23:32:01 - file_logger - INFO - Sending text-only request to model deepseek-chat
-2025-01-23 23:32:01 - file_logger - DEBUG - Request payload preview:
-Extract and structure ONLY the following information from the product description:
-
-        Required Information(if available):
-        1. Frame Material (composition and finish):
-        2. Lens Type...
-2025-01-23 23:32:07 - file_logger - SUCCESS - API request completed successfully
-2025-01-23 23:32:07 - file_logger - DEBUG - Response metadata: Tokens used - 1903 (Prompt: 1771, Completion: 132)
-2025-01-23 23:32:07 - file_logger - DEBUG - Response content preview:
-```json
-{
-  "material": "hand-polished cellulose acetate",
-  "lens_type": "Polycarbonate",
-  "measurements": {
-    "Medium": 134,
-    "Wide": 138,
-    "Medium Wide": 134
-  },
-  "branding": [
-    "Grad...
-2025-01-23 23:43:36 - file_logger - INFO - DeepSeek client initialized with API key
-2025-01-23 23:43:48 - file_logger - DEBUG - Starting API request preparation
-2025-01-23 23:43:48 - file_logger - INFO - Sending text-only request to model deepseek-chat
-2025-01-23 23:43:48 - file_logger - DEBUG - Request payload preview:
-Extract and structure ONLY the following information from the product description:
-
-        Required Information(if available):
-        1. Frame Material (composition and finish):
-        2. Lens Type...
-2025-01-23 23:43:54 - file_logger - SUCCESS - API request completed successfully
-2025-01-23 23:43:54 - file_logger - DEBUG - Response metadata: Tokens used - 1917 (Prompt: 1773, Completion: 144)
-2025-01-23 23:43:54 - file_logger - DEBUG - Response content preview:
-```json
-{
-  "material": "hand-polished cellulose acetate",
-  "lens_type": "Polycarbonate",
-  "measurements": {
-    "Medium": 134,
-    "Wide": 138,
-    "Medium Wide": 134
-  },
-  "branding": [
-    "Grad...
-2025-01-23 23:53:38 - file_logger - INFO - DeepSeek client initialized with API key
-2025-01-23 23:53:38 - file_logger - DEBUG - Starting API request preparation
-2025-01-23 23:53:38 - file_logger - INFO - Sending text-only request to model deepseek-chat
-2025-01-23 23:53:38 - file_logger - DEBUG - Request payload preview:
-Combine these specifications and visual analysis into a final 3D modeling prompt:
-        
-        Product Specifications:
-        material='hand-polished cellulose acetate' lens_type='Polycarbonate' ...
-2025-01-23 23:53:47 - file_logger - SUCCESS - API request completed successfully
-2025-01-23 23:53:47 - file_logger - DEBUG - Response metadata: Tokens used - 547 (Prompt: 334, Completion: 213)
-2025-01-23 23:53:47 - file_logger - DEBUG - Response content preview:
-Create a 3D model of a pair of brown-toned eyeglasses with the following specifications: The frames are made of hand-polished cellulose acetate, exhibiting a marbled pattern with varying brown tones a...
-2025-01-24 00:16:27 - file_logger - INFO - DeepSeek client initialized with API key
-2025-01-24 00:16:27 - file_logger - DEBUG - Starting API request preparation
-2025-01-24 00:16:27 - file_logger - INFO - Sending text-only request to model deepseek-chat
-2025-01-24 00:16:27 - file_logger - DEBUG - Request payload preview:
+    "Me...
+2025-01-24 16:31:47 - file_logger - INFO - DeepSeek client initialized with API key
+2025-01-24 16:31:47 - file_logger - DEBUG - Starting API request preparation
+2025-01-24 16:31:47 - file_logger - INFO - Sending text-only request to model deepseek-reasoner
+2025-01-24 16:31:47 - file_logger - DEBUG - Request payload preview:
 Combine these technical specifications and visual analysis into a production-ready 3D modeling prompt:  
         
         Product Specifications:
         material='hand-polished cellulose acetate' len...
-2025-01-24 00:16:44 - file_logger - SUCCESS - API request completed successfully
-2025-01-24 00:16:44 - file_logger - DEBUG - Response metadata: Tokens used - 1281 (Prompt: 759, Completion: 522)
-2025-01-24 00:16:44 - file_logger - DEBUG - Response content preview:
-1. Material Properties:  
-- Frame material: Hand-polished cellulose acetate with a marbled brown tone pattern.  
-- PBR values: roughness = 0.4, metallic = 0.0.  
-- Surface finish: Smooth and glossy. I...
-2025-01-24 00:20:58 - file_logger - INFO - DeepSeek client initialized with API key
-2025-01-24 00:20:58 - file_logger - DEBUG - Starting API request preparation
-2025-01-24 00:20:58 - file_logger - INFO - Sending text-only request to model deepseek-chat
-2025-01-24 00:20:58 - file_logger - DEBUG - Request payload preview:
+2025-01-24 16:31:56 - file_logger - INFO - DeepSeek client initialized with API key
+2025-01-24 16:31:56 - file_logger - DEBUG - Starting API request preparation
+2025-01-24 16:31:56 - file_logger - INFO - Sending text-only request to model deepseek-reasoner
+2025-01-24 16:31:56 - file_logger - DEBUG - Request payload preview:
 Combine these technical specifications and visual analysis into a production-ready 3D modeling prompt:  
         
         Product Specifications:
         material='hand-polished cellulose acetate' len...
-2025-01-24 00:21:12 - file_logger - SUCCESS - API request completed successfully
-2025-01-24 00:21:12 - file_logger - DEBUG - Response metadata: Tokens used - 1324 (Prompt: 789, Completion: 535)
-2025-01-24 00:21:12 - file_logger - DEBUG - Response content preview:
-Create a 3D model of a pair of glasses based on the given specifications and visual analysis of the glasses.  
-
-1. Material Properties:  
-- Frame material: Hand-polished cellulose acetate with a marbl...
-2025-01-24 00:37:43 - file_logger - INFO - DeepSeek client initialized with API key
-2025-01-24 00:39:19 - file_logger - INFO - DeepSeek client initialized with API key
-2025-01-24 01:46:42 - file_logger - INFO - DeepSeek client initialized with API key
-2025-01-24 01:46:42 - file_logger - DEBUG - Starting API request preparation
-2025-01-24 01:46:42 - file_logger - INFO - Sending text-only request to model deepseek-chat
-2025-01-24 01:46:42 - file_logger - DEBUG - Request payload preview:
-Convert this 3D modeling prompt into Rodin API JSON configuration:
-        - Use 'concat' condition_mode for 2 views
-        - Look for PBR values (roughness, metallic)
-        - Always set quality=hi...
-2025-01-24 01:47:16 - file_logger - SUCCESS - API request completed successfully
-2025-01-24 01:47:16 - file_logger - DEBUG - Response metadata: Tokens used - 1793 (Prompt: 765, Completion: 1028)
-2025-01-24 01:47:16 - file_logger - DEBUG - Response content preview:
-Here is the Rodin API JSON configuration based on your prompt and rules:
-
-```json
-{
-  "condition_mode": "concat",
-  "views": [
-    {
-      "image_url": "https://i.warbycdn.com/s/c/4472d9c6990b2f86b171...
-2025-01-24 01:50:08 - file_logger - INFO - DeepSeek client initialized with API key
-2025-01-24 01:50:08 - file_logger - DEBUG - Starting API request preparation
-2025-01-24 01:50:08 - file_logger - INFO - Sending text-only request to model deepseek-chat
-2025-01-24 01:50:08 - file_logger - DEBUG - Request payload preview:
+2025-01-24 16:32:16 - file_logger - SUCCESS - API request completed successfully
+2025-01-24 16:32:16 - file_logger - DEBUG - Response metadata: Tokens used - 3470 (Prompt: 2425, Completion: 1045)
+2025-01-24 16:32:16 - file_logger - DEBUG - Response content preview:
+Create a 3D model of brown tortoise-shell acetate eyewear with hand-polished cellulose acetate frame exhibiting a matte finish (PBR roughness: 0.4, metallic: 0.0). Implement two-tone marbling with irr...
+2025-01-24 16:32:16 - file_logger - INFO - DeepSeek client initialized with API key
+2025-01-24 16:32:16 - file_logger - DEBUG - Starting API request preparation
+2025-01-24 16:32:16 - file_logger - INFO - Sending text-only request to model deepseek-reasoner
+2025-01-24 16:32:16 - file_logger - DEBUG - Request payload preview:
 Return a valid JSON configuration for the Rodin API. Your response must be ONLY a JSON object.
 
         Example format:
         {
             "prompt": "create a detailed 3D model...",
             "co...
-2025-01-24 01:50:24 - file_logger - SUCCESS - API request completed successfully
-2025-01-24 01:50:24 - file_logger - DEBUG - Response metadata: Tokens used - 1371 (Prompt: 857, Completion: 514)
-2025-01-24 01:50:24 - file_logger - DEBUG - Response content preview:
+2025-01-24 16:32:44 - file_logger - SUCCESS - API request completed successfully
+2025-01-24 16:32:44 - file_logger - DEBUG - Response metadata: Tokens used - 2194 (Prompt: 675, Completion: 1519)
+2025-01-24 16:32:44 - file_logger - DEBUG - Response content preview:
 ```json
 {
-    "prompt": "Create a 3D model of a pair of glasses based on the given specifications and visual analysis of the glasses. Material Properties: Frame material - Hand-polished cellulose acet...
-2025-01-24 01:50:24 - file_logger - INFO - Submitting Rodin job
-2025-01-24 01:52:16 - file_logger - ERROR - Processing failed: 'dict' object has no attribute 'request_id'
-2025-01-24 01:56:50 - file_logger - INFO - DeepSeek client initialized with API key
-2025-01-24 01:56:50 - file_logger - DEBUG - Starting API request preparation
-2025-01-24 01:56:50 - file_logger - INFO - Sending text-only request to model deepseek-chat
-2025-01-24 01:56:50 - file_logger - DEBUG - Request payload preview:
-Return a valid JSON configuration for the Rodin API. Your response must be ONLY a JSON object.
+    "prompt": "Create a 3D model of brown tortoise-shell acetate eyewear with hand-polished cellulose acetate frame exhibiting a matte finish (PBR roughness: 0.4, metallic: 0.0). Implement t...
+2025-01-24 16:32:44 - file_logger - INFO - Submitting Rodin job
+2025-01-24 16:34:36 - file_logger - DEBUG - Received handler object: {'model_mesh': {'url': 'https://v3.fal.media/files/koala/Y_ukDDgdEymqdyOezXmAC_highpoly_high_pbr.glb', 'content_type': 'application/octet-stream', 'file_name': 'highpoly_high_pbr.glb', 'file_size': 68704244}, 'seed': 28107, 'textures': []}
+2025-01-24 16:34:36 - file_logger - DEBUG - Handler type: <class 'dict'>
+2025-01-24 16:34:36 - file_logger - ERROR - Processing failed: 'dict' object has no attribute 'status'
+2025-01-24 16:38:12 - file_logger - INFO - DeepSeek client initialized with API key
+2025-01-24 16:38:12 - file_logger - INFO - Submitting Rodin job
+2025-01-24 16:38:41 - file_logger - INFO - DeepSeek client initialized with API key
+2025-01-24 16:38:55 - file_logger - DEBUG - Starting API request preparation
+2025-01-24 16:38:55 - file_logger - INFO - Sending text-only request to model deepseek-reasoner
+2025-01-24 16:38:55 - file_logger - DEBUG - Request payload preview:
+Extract and structure ONLY the following information from the product description:
 
-        Example format:
-        {
-            "prompt": "create a detailed 3D model...",
-            "co...
-2025-01-24 01:57:07 - file_logger - SUCCESS - API request completed successfully
-2025-01-24 01:57:07 - file_logger - DEBUG - Response metadata: Tokens used - 1371 (Prompt: 857, Completion: 514)
-2025-01-24 01:57:07 - file_logger - DEBUG - Response content preview:
-```json
+        Required Information(if available):
+        1. Frame Material (composition and finish):
+        2. Lens Type...
+2025-01-24 16:40:03 - file_logger - SUCCESS - API request completed successfully
+2025-01-24 16:40:03 - file_logger - DEBUG - Response metadata: Tokens used - 5528 (Prompt: 1712, Completion: 3816)
+2025-01-24 16:40:03 - file_logger - DEBUG - Response content preview:
 {
-    "prompt": "Create a 3D model of a pair of glasses based on the given specifications and visual analysis of the glasses. Material Properties: Frame material - Hand-polished cellulose acet...
-2025-01-24 01:57:07 - file_logger - INFO - Submitting Rodin job
-2025-01-24 01:57:18 - file_logger - ERROR - Processing failed: Invalid Request
-2025-01-24 02:03:18 - file_logger - INFO - DeepSeek client initialized with API key
-2025-01-24 02:03:18 - file_logger - DEBUG - Starting API request preparation
-2025-01-24 02:03:18 - file_logger - INFO - Sending text-only request to model deepseek-chat
-2025-01-24 02:03:18 - file_logger - DEBUG - Request payload preview:
-Return a valid JSON configuration for the Rodin API. Your response must be ONLY a JSON object.
-
-        Example format:
-        {
-            "prompt": "create a detailed 3D model...",
-            "co...
-2025-01-24 02:03:34 - file_logger - SUCCESS - API request completed successfully
-2025-01-24 02:03:34 - file_logger - DEBUG - Response metadata: Tokens used - 1371 (Prompt: 857, Completion: 514)
-2025-01-24 02:03:34 - file_logger - DEBUG - Response content preview:
-```json
-{
-    "prompt": "Create a 3D model of a pair of glasses based on the given specifications and visual analysis of the glasses. Material Properties: Frame material - Hand-polished cellulose acet...
-2025-01-24 02:03:34 - file_logger - INFO - Submitting Rodin job
-2025-01-24 02:05:23 - file_logger - DEBUG - Received handler object: {'model_mesh': {'url': 'https://v3.fal.media/files/kangaroo/gMUyQ6vRCKRd61oGMjmZ4_highpoly_high_pbr.glb', 'content_type': 'application/octet-stream', 'file_name': 'highpoly_high_pbr.glb', 'file_size': 69172024}, 'seed': 60506, 'textures': []}
-2025-01-24 02:05:23 - file_logger - DEBUG - Handler type: <class 'dict'>
-2025-01-24 02:05:23 - file_logger - ERROR - Processing failed: No request ID found in the response
-2025-01-24 02:24:19 - file_logger - INFO - DeepSeek client initialized with API key
-2025-01-24 02:24:19 - file_logger - DEBUG - Starting API request preparation
-2025-01-24 02:24:19 - file_logger - INFO - Sending text-only request to model deepseek-chat
-2025-01-24 02:24:19 - file_logger - DEBUG - Request payload preview:
+  "material": "hand-polished cellulose acetate",
+  "lens_type": "Polycarbonate lenses with anti-reflective and scratch-resistant lens coatings, blocks 100% of UV rays",
+  "measurements": {
+    "widt...
+2025-01-24 16:41:19 - file_logger - INFO - DeepSeek client initialized with API key
+2025-01-24 16:41:19 - file_logger - DEBUG - Starting API request preparation
+2025-01-24 16:41:19 - file_logger - INFO - Sending text-only request to model deepseek-reasoner
+2025-01-24 16:41:19 - file_logger - DEBUG - Request payload preview:
 Combine these technical specifications and visual analysis into a production-ready 3D modeling prompt:  
         
         Product Specifications:
         material='hand-polished cellulose acetate' len...
-2025-01-24 02:24:32 - file_logger - SUCCESS - API request completed successfully
-2025-01-24 02:24:32 - file_logger - DEBUG - Response metadata: Tokens used - 1925 (Prompt: 1564, Completion: 361)
-2025-01-24 02:24:32 - file_logger - DEBUG - Response content preview:
-Create a 3D model of a pair of brown-toned eyeglasses with a frame made of hand-polished cellulose acetate, exhibiting a marbled pattern with varying shades of brown and a smooth, glossy finish (PBR r...
-2025-01-24 02:24:32 - file_logger - INFO - DeepSeek client initialized with API key
-2025-01-24 02:24:32 - file_logger - DEBUG - Starting API request preparation
-2025-01-24 02:24:32 - file_logger - INFO - Sending text-only request to model deepseek-chat
-2025-01-24 02:24:32 - file_logger - DEBUG - Request payload preview:
+2025-01-24 16:41:35 - file_logger - SUCCESS - API request completed successfully
+2025-01-24 16:41:35 - file_logger - DEBUG - Response metadata: Tokens used - 2587 (Prompt: 1840, Completion: 747)
+2025-01-24 16:41:35 - file_logger - DEBUG - Response content preview:
+Create a 3D model of brown tortoiseshell acetate eyeglasses with hand-polished cellulose acetate frames (roughness: 0.4, metallic: 0.0) showing marbled patterns blending dark/medium brown tones. Model...
+2025-01-24 16:41:35 - file_logger - INFO - DeepSeek client initialized with API key
+2025-01-24 16:41:35 - file_logger - DEBUG - Starting API request preparation
+2025-01-24 16:41:35 - file_logger - INFO - Sending text-only request to model deepseek-reasoner
+2025-01-24 16:41:35 - file_logger - DEBUG - Request payload preview:
 Return a valid JSON configuration for the Rodin API. Your response must be ONLY a JSON object.
 
         Example format:
         {
             "prompt": "create a detailed 3D model...",
             "co...
-2025-01-24 02:24:47 - file_logger - SUCCESS - API request completed successfully
-2025-01-24 02:24:47 - file_logger - DEBUG - Response metadata: Tokens used - 1107 (Prompt: 683, Completion: 424)
-2025-01-24 02:24:47 - file_logger - DEBUG - Response content preview:
-```json
+2025-01-24 16:42:00 - file_logger - SUCCESS - API request completed successfully
+2025-01-24 16:42:00 - file_logger - DEBUG - Response metadata: Tokens used - 1972 (Prompt: 603, Completion: 1369)
+2025-01-24 16:42:00 - file_logger - DEBUG - Response content preview:
 {
-    "prompt": "Create a 3D model of a pair of brown-toned eyeglasses with a frame made of hand-polished cellulose acetate, exhibiting a marbled pattern with varying shades of brown and a smo...
-2025-01-24 02:24:47 - file_logger - INFO - Submitting Rodin job
-2025-01-24 02:24:47 - file_logger - ERROR - Processing failed: 'RodinAPI' object has no attribute '_extract_value'
-2025-01-24 02:27:08 - file_logger - INFO - DeepSeek client initialized with API key
-2025-01-24 02:27:08 - file_logger - DEBUG - Starting API request preparation
-2025-01-24 02:27:08 - file_logger - INFO - Sending text-only request to model deepseek-chat
-2025-01-24 02:27:08 - file_logger - DEBUG - Request payload preview:
-Combine these technical specifications and visual analysis into a production-ready 3D modeling prompt:  
-        
-        Product Specifications:
-        material='hand-polished cellulose acetate' len...
-2025-01-24 02:27:20 - file_logger - SUCCESS - API request completed successfully
-2025-01-24 02:27:20 - file_logger - DEBUG - Response metadata: Tokens used - 1964 (Prompt: 1564, Completion: 400)
-2025-01-24 02:27:20 - file_logger - DEBUG - Response content preview:
-Create a 3D model of a pair of brown-toned eyeglasses with a frame made of hand-polished cellulose acetate, exhibiting a marbled pattern with varying shades of brown and a smooth, glossy finish (PBR r...
-2025-01-24 02:27:20 - file_logger - INFO - DeepSeek client initialized with API key
-2025-01-24 02:27:20 - file_logger - DEBUG - Starting API request preparation
-2025-01-24 02:27:20 - file_logger - INFO - Sending text-only request to model deepseek-chat
-2025-01-24 02:27:20 - file_logger - DEBUG - Request payload preview:
-Return a valid JSON configuration for the Rodin API. Your response must be ONLY a JSON object.
-
-        Example format:
-        {
-            "prompt": "create a detailed 3D model...",
-            "co...
-2025-01-24 02:27:34 - file_logger - SUCCESS - API request completed successfully
-2025-01-24 02:27:34 - file_logger - DEBUG - Response metadata: Tokens used - 1187 (Prompt: 722, Completion: 465)
-2025-01-24 02:27:34 - file_logger - DEBUG - Response content preview:
-```json
-{
-    "prompt": "Create a 3D model of a pair of brown-toned eyeglasses with a frame made of hand-polished cellulose acetate, exhibiting a marbled pattern with varying shades of brown and a smo...
-2025-01-24 02:27:34 - file_logger - INFO - Submitting Rodin job
-2025-01-24 02:27:34 - file_logger - ERROR - Processing failed: 'RodinAPI' object has no attribute '_extract_value'
-2025-01-24 02:50:57 - file_logger - INFO - DeepSeek client initialized with API key
-2025-01-24 02:50:57 - file_logger - DEBUG - Starting API request preparation
-2025-01-24 02:50:57 - file_logger - INFO - Sending text-only request to model deepseek-chat
-2025-01-24 02:50:57 - file_logger - DEBUG - Request payload preview:
-Return a valid JSON configuration for the Rodin API. Your response must be ONLY a JSON object.
-
-        Example format:
-        {
-            "prompt": "create a detailed 3D model...",
-            "co...
-2025-01-24 02:51:12 - file_logger - SUCCESS - API request completed successfully
-2025-01-24 02:51:12 - file_logger - DEBUG - Response metadata: Tokens used - 1187 (Prompt: 722, Completion: 465)
-2025-01-24 02:51:12 - file_logger - DEBUG - Response content preview:
-```json
-{
-    "prompt": "Create a 3D model of a pair of brown-toned eyeglasses with a frame made of hand-polished cellulose acetate, exhibiting a marbled pattern with varying shades of brown and a smo...
-2025-01-24 02:51:12 - file_logger - INFO - Submitting Rodin job
-2025-01-24 02:52:53 - file_logger - DEBUG - Received handler object: {'model_mesh': {'url': 'https://v3.fal.media/files/tiger/hOPEznbxR24SRX5TvqLl__highpoly_high_pbr.glb', 'content_type': 'application/octet-stream', 'file_name': 'highpoly_high_pbr.glb', 'file_size': 70400912}, 'seed': 20994, 'textures': []}
-2025-01-24 02:52:53 - file_logger - DEBUG - Handler type: <class 'dict'>
-2025-01-24 02:52:53 - file_logger - ERROR - Processing failed: No request ID found in the response
-2025-01-24 03:14:53 - file_logger - INFO - DeepSeek client initialized with API key
-2025-01-24 03:15:10 - file_logger - DEBUG - Starting API request preparation
-2025-01-24 03:15:10 - file_logger - INFO - Sending text-only request to model deepseek-chat
-2025-01-24 03:15:10 - file_logger - DEBUG - Request payload preview:
+    "prompt": "Create a 3D model of brown tortoiseshell acetate eyeglasses with hand-polished cellulose acetate frames (roughness: 0.4, metallic: 0.0) showing marbled patterns blending dark/medium b...
+2025-01-24 16:42:00 - file_logger - INFO - Submitting Rodin job
+2025-01-24 16:43:53 - file_logger - DEBUG - Received handler object: {'model_mesh': {'url': 'https://v3.fal.media/files/elephant/uTgYAp4_LQhdYtXlX0X8y_highpoly_high_pbr.glb', 'content_type': 'application/octet-stream', 'file_name': 'highpoly_high_pbr.glb', 'file_size': 69000956}, 'seed': 1429, 'textures': []}
+2025-01-24 16:43:53 - file_logger - DEBUG - Handler type: <class 'dict'>
+2025-01-24 16:43:53 - file_logger - ERROR - Processing failed: 'dict' object has no attribute 'status'
+2025-01-24 17:10:42 - file_logger - INFO - DeepSeek client initialized with API key
+2025-01-24 17:11:05 - file_logger - DEBUG - Starting API request preparation
+2025-01-24 17:11:05 - file_logger - INFO - Sending text-only request to model deepseek-reasoner
+2025-01-24 17:11:05 - file_logger - DEBUG - Request payload preview:
 Extract and structure ONLY the following information from the product description:
 
         Required Information(if available):
         1. Frame Material (composition and finish):
         2. Lens Type...
-2025-01-24 03:15:15 - file_logger - SUCCESS - API request completed successfully
-2025-01-24 03:15:15 - file_logger - DEBUG - Response metadata: Tokens used - 1896 (Prompt: 1754, Completion: 142)
-2025-01-24 03:15:15 - file_logger - DEBUG - Response content preview:
-```json
-{
-  "material": "hand-polished cellulose acetate and stainless steel",
-  "lens_type": "Polycarbonate",
-  "measurements": {
-    "Medium": 136,
-    "Wide": 142,
-    "Medium Wide": "136 mm 142 mm...
-2025-01-24 03:16:39 - file_logger - INFO - DeepSeek client initialized with API key
-2025-01-24 03:16:39 - file_logger - DEBUG - Starting API request preparation
-2025-01-24 03:16:39 - file_logger - INFO - Sending text-only request to model deepseek-chat
-2025-01-24 03:16:39 - file_logger - DEBUG - Request payload preview:
-Combine these technical specifications and visual analysis into a production-ready 3D modeling prompt:  
-        
-        Product Specifications:
-        material='hand-polished cellulose acetate and ...
-2025-01-24 03:19:14 - file_logger - INFO - DeepSeek client initialized with API key
-2025-01-24 03:19:44 - file_logger - DEBUG - Starting API request preparation
-2025-01-24 03:19:44 - file_logger - INFO - Sending text-only request to model deepseek-chat
-2025-01-24 03:19:44 - file_logger - DEBUG - Request payload preview:
-Extract and structure ONLY the following information from the product description:
-
-        Required Information(if available):
-        1. Frame Material (composition and finish):
-        2. Lens Type...
-2025-01-24 03:19:49 - file_logger - SUCCESS - API request completed successfully
-2025-01-24 03:19:49 - file_logger - DEBUG - Response metadata: Tokens used - 1888 (Prompt: 1747, Completion: 141)
-2025-01-24 03:19:49 - file_logger - DEBUG - Response content preview:
-```json
-{
-  "material": "hand-polished cellulose acetate and stainless steel",
-  "lens_type": "Polycarbonate lenses",
-  "measurements": {
-    "Medium": 136,
-    "Wide": 142,
-    "Medium Wide": 136
-  }...
-2025-01-24 03:21:29 - file_logger - INFO - DeepSeek client initialized with API key
-2025-01-24 03:21:29 - file_logger - DEBUG - Starting API request preparation
-2025-01-24 03:21:29 - file_logger - INFO - Sending text-only request to model deepseek-chat
-2025-01-24 03:21:29 - file_logger - DEBUG - Request payload preview:
-Combine these technical specifications and visual analysis into a production-ready 3D modeling prompt:  
-        
-        Product Specifications:
-        material='hand-polished cellulose acetate and ...
-2025-01-24 03:21:47 - file_logger - SUCCESS - API request completed successfully
-2025-01-24 03:21:47 - file_logger - DEBUG - Response metadata: Tokens used - 2189 (Prompt: 1579, Completion: 610)
-2025-01-24 03:21:47 - file_logger - DEBUG - Response content preview:
-Create a 3D model of a pair of black-framed eyeglasses with a gold-colored metal rim, based on the given specifications and visual analysis of the glasses (material='hand-polished cellulose acetate an...
-2025-01-24 03:21:47 - file_logger - INFO - DeepSeek client initialized with API key
-2025-01-24 03:21:47 - file_logger - DEBUG - Starting API request preparation
-2025-01-24 03:21:47 - file_logger - INFO - Sending text-only request to model deepseek-chat
-2025-01-24 03:21:47 - file_logger - DEBUG - Request payload preview:
-Return a valid JSON configuration for the Rodin API. Your response must be ONLY a JSON object.
-
-        Example format:
-        {
-            "prompt": "create a detailed 3D model...",
-            "co...
-2025-01-24 03:21:59 - file_logger - SUCCESS - API request completed successfully
-2025-01-24 03:21:59 - file_logger - DEBUG - Response metadata: Tokens used - 1372 (Prompt: 934, Completion: 438)
-2025-01-24 03:21:59 - file_logger - DEBUG - Response content preview:
-```json
-{
-    "prompt": "Create a 3D model of a pair of black-framed eyeglasses with a gold-colored metal rim, based on the given specifications and visual analysis of the glasses. Ensure the frame is...
-2025-01-24 03:21:59 - file_logger - INFO - Submitting Rodin job
-2025-01-24 03:23:49 - file_logger - DEBUG - Received handler object: {'model_mesh': {'url': 'https://v3.fal.media/files/koala/t316p-CSHUSJ6OPMa674r_highpoly_high_pbr.glb', 'content_type': 'application/octet-stream', 'file_name': 'highpoly_high_pbr.glb', 'file_size': 65846712}, 'seed': 14521, 'textures': []}
-2025-01-24 03:23:49 - file_logger - DEBUG - Handler type: <class 'dict'>
-2025-01-24 03:23:49 - file_logger - ERROR - Processing failed: No request ID found in the response
-2025-01-24 12:26:29 - file_logger - INFO - DeepSeek client initialized with API key
-2025-01-24 12:26:49 - file_logger - DEBUG - Starting API request preparation
-2025-01-24 12:26:49 - file_logger - INFO - Sending text-only request to model deepseek-chat
-2025-01-24 12:26:49 - file_logger - DEBUG - Request payload preview:
-Extract and structure ONLY the following information from the product description:
-
-        Required Information(if available):
-        1. Frame Material (composition and finish):
-        2. Lens Type...
-2025-01-24 12:26:57 - file_logger - SUCCESS - API request completed successfully
-2025-01-24 12:26:57 - file_logger - DEBUG - Response metadata: Tokens used - 1941 (Prompt: 1807, Completion: 134)
-2025-01-24 12:26:57 - file_logger - DEBUG - Response content preview:
-```json
-{
-  "material": "nickel-titanium alloy (memory metal)",
-  "lens_type": "polycarbonate (impact-resistant, anti-reflective, scratch-resistant, 100% UV protection)",
-  "measurements": {
-    "narr...
-2025-01-24 12:28:12 - file_logger - INFO - DeepSeek client initialized with API key
-2025-01-24 12:28:12 - file_logger - DEBUG - Starting API request preparation
-2025-01-24 12:28:12 - file_logger - INFO - Sending text-only request to model deepseek-chat
-2025-01-24 12:28:12 - file_logger - DEBUG - Request payload preview:
-Combine these technical specifications and visual analysis into a production-ready 3D modeling prompt:  
-        
-        Product Specifications:
-        material='nickel-titanium alloy (memory metal)...
-2025-01-24 12:28:26 - file_logger - SUCCESS - API request completed successfully
-2025-01-24 12:28:26 - file_logger - DEBUG - Response metadata: Tokens used - 2216 (Prompt: 1519, Completion: 697)
-2025-01-24 12:28:26 - file_logger - DEBUG - Response content preview:
-Create a 3D model of a pair of glasses based on the given specifications and visual analysis of the glasses (material='nickel-titanium alloy (memory metal)' lens_type='polycarbonate (impact-resistant,...
-2025-01-24 12:28:26 - file_logger - INFO - DeepSeek client initialized with API key
-2025-01-24 12:28:26 - file_logger - DEBUG - Starting API request preparation
-2025-01-24 12:28:26 - file_logger - INFO - Sending text-only request to model deepseek-chat
-2025-01-24 12:28:26 - file_logger - DEBUG - Request payload preview:
-Return a valid JSON configuration for the Rodin API. Your response must be ONLY a JSON object.
-
-        Example format:
-        {
-            "prompt": "create a detailed 3D model...",
-            "co...
-2025-01-24 12:28:40 - file_logger - SUCCESS - API request completed successfully
-2025-01-24 12:28:40 - file_logger - DEBUG - Response metadata: Tokens used - 1764 (Prompt: 1017, Completion: 747)
-2025-01-24 12:28:40 - file_logger - DEBUG - Response content preview:
-```json
-{
-    "prompt": "Create a 3D model of a pair of glasses with a polished gold-toned nickel-titanium alloy frame, clear polycarbonate lenses, and standard metal barrel hinges. Include subtle sur...
-2025-01-24 12:28:40 - file_logger - INFO - Submitting Rodin job
-2025-01-24 12:31:00 - file_logger - DEBUG - Received handler object: {'model_mesh': {'url': 'https://v3.fal.media/files/panda/9EuFQViNMSBq8i0VU9DwN_highpoly_high_pbr.glb', 'content_type': 'application/octet-stream', 'file_name': 'highpoly_high_pbr.glb', 'file_size': 71022952}, 'seed': 1025, 'textures': []}
-2025-01-24 12:31:00 - file_logger - DEBUG - Handler type: <class 'dict'>
-2025-01-24 12:31:00 - file_logger - ERROR - Processing failed: No request ID found in the response
-2025-01-24 12:40:29 - file_logger - INFO - DeepSeek client initialized with API key
-2025-01-24 12:40:29 - file_logger - DEBUG - Starting API request preparation
-2025-01-24 12:40:29 - file_logger - INFO - Sending text-only request to model deepseek-chat
-2025-01-24 12:40:29 - file_logger - DEBUG - Request payload preview:
-Return a valid JSON configuration for the Rodin API. Your response must be ONLY a JSON object.
-
-        Example format:
-        {
-            "prompt": "create a detailed 3D model...",
-            "co...
-2025-01-24 12:40:40 - file_logger - SUCCESS - API request completed successfully
-2025-01-24 12:40:40 - file_logger - DEBUG - Response metadata: Tokens used - 1273 (Prompt: 1017, Completion: 256)
-2025-01-24 12:40:40 - file_logger - DEBUG - Response content preview:
-```json
-{
-    "prompt": "Create a 3D model of a pair of glasses with a polished gold-toned nickel-titanium alloy frame, clear polycarbonate hexagonal lenses, and standard metal barrel hinges. Include ...
-2025-01-24 12:40:40 - file_logger - INFO - Submitting Rodin job
-2025-01-24 12:41:19 - file_logger - INFO - DeepSeek client initialized with API key
-2025-01-24 12:41:19 - file_logger - DEBUG - Starting API request preparation
-2025-01-24 12:41:19 - file_logger - INFO - Sending text-only request to model deepseek-chat
-2025-01-24 12:41:19 - file_logger - DEBUG - Request payload preview:
-Combine these technical specifications and visual analysis into a production-ready 3D modeling prompt:  
-        
-        Product Specifications:
-        material='nickel-titanium alloy (memory metal)...
-2025-01-24 12:41:39 - file_logger - SUCCESS - API request completed successfully
-2025-01-24 12:41:39 - file_logger - DEBUG - Response metadata: Tokens used - 2314 (Prompt: 1554, Completion: 760)
-2025-01-24 12:41:39 - file_logger - DEBUG - Response content preview:
-Create a 3D model of a pair of glasses based on the given specifications and visual analysis of the glasses (material='nickel-titanium alloy (memory metal)' lens_type='polycarbonate (impact-resistant,...
-2025-01-24 12:41:39 - file_logger - INFO - DeepSeek client initialized with API key
-2025-01-24 12:41:39 - file_logger - DEBUG - Starting API request preparation
-2025-01-24 12:41:39 - file_logger - INFO - Sending text-only request to model deepseek-chat
-2025-01-24 12:41:39 - file_logger - DEBUG - Request payload preview:
-Return a valid JSON configuration for the Rodin API. Your response must be ONLY a JSON object.
-
-        Example format:
-        {
-            "prompt": "create a detailed 3D model...",
-            "co...
-2025-01-24 12:41:47 - file_logger - SUCCESS - API request completed successfully
-2025-01-24 12:41:47 - file_logger - DEBUG - Response metadata: Tokens used - 1376 (Prompt: 1080, Completion: 296)
-2025-01-24 12:41:47 - file_logger - DEBUG - Response content preview:
-```json
-{
-    "prompt": "Create a 3D model of a pair of glasses with a polished, light gold-colored nickel-titanium alloy frame and clear polycarbonate lenses. The frame has a roughness of 0.4 and met...
-2025-01-24 12:41:47 - file_logger - INFO - Submitting Rodin job
-2025-01-24 12:44:04 - file_logger - DEBUG - Received handler object: {'model_mesh': {'url': 'https://v3.fal.media/files/koala/PVni1Ntp6PR5dZtAyj0Bl_highpoly_high_pbr.glb', 'content_type': 'application/octet-stream', 'file_name': 'highpoly_high_pbr.glb', 'file_size': 72706896}, 'seed': 24003, 'textures': []}
-2025-01-24 12:44:04 - file_logger - DEBUG - Handler type: <class 'dict'>
-2025-01-24 12:44:04 - file_logger - ERROR - Processing failed: No request ID found in the response
-2025-01-24 12:56:46 - file_logger - INFO - DeepSeek client initialized with API key
-2025-01-24 12:56:46 - file_logger - DEBUG - Starting API request preparation
-2025-01-24 12:56:46 - file_logger - INFO - Sending text-only request to model deepseek-reasoner
-2025-01-24 12:56:46 - file_logger - DEBUG - Request payload preview:
-Combine these technical specifications and visual analysis into a production-ready 3D modeling prompt:  
-        
-        Product Specifications:
-        material='nickel-titanium alloy (memory metal)...
-2025-01-24 12:57:27 - file_logger - SUCCESS - API request completed successfully
-2025-01-24 12:57:27 - file_logger - DEBUG - Response metadata: Tokens used - 3848 (Prompt: 1610, Completion: 2238)
-2025-01-24 12:57:27 - file_logger - DEBUG - Response content preview:
-Create a 3D model of gold-toned eyewear with a polished nickel-titanium alloy frame (roughness: 0.4, metallic: 1.0) and clear hexagonal polycarbonate lenses (refractive index: 1.49). Use precise measu...
-2025-01-24 12:57:27 - file_logger - INFO - DeepSeek client initialized with API key
-2025-01-24 12:57:27 - file_logger - DEBUG - Starting API request preparation
-2025-01-24 12:57:27 - file_logger - INFO - Sending text-only request to model deepseek-reasoner
-2025-01-24 12:57:27 - file_logger - DEBUG - Request payload preview:
-Return a valid JSON configuration for the Rodin API. Your response must be ONLY a JSON object.
-
-        Example format:
-        {
-            "prompt": "create a detailed 3D model...",
-            "co...
-2025-01-24 12:57:47 - file_logger - SUCCESS - API request completed successfully
-2025-01-24 12:57:47 - file_logger - DEBUG - Response metadata: Tokens used - 1610 (Prompt: 565, Completion: 1045)
-2025-01-24 12:57:47 - file_logger - DEBUG - Response content preview:
-{
-    "prompt": "Create a 3D model of gold-toned eyewear with a polished nickel-titanium alloy frame (roughness: 0.4, metallic: 1.0) and clear hexagonal polycarbonate lenses (refractive index: 1.49). ...
-2025-01-24 12:57:47 - file_logger - INFO - Submitting Rodin job
-2025-01-24 12:59:38 - file_logger - DEBUG - Received handler object: {'model_mesh': {'url': 'https://v3.fal.media/files/rabbit/Et04GLSrVZBhZ-NMsxyYu_highpoly_high_pbr.glb', 'content_type': 'application/octet-stream', 'file_name': 'highpoly_high_pbr.glb', 'file_size': 75175932}, 'seed': 20779, 'textures': []}
-2025-01-24 12:59:38 - file_logger - DEBUG - Handler type: <class 'dict'>
-2025-01-24 12:59:39 - file_logger - ERROR - Processing failed: 405: Method Not Allowed
-2025-01-24 13:10:43 - file_logger - INFO - DeepSeek client initialized with API key
-2025-01-24 13:10:43 - file_logger - DEBUG - Starting API request preparation
-2025-01-24 13:10:43 - file_logger - INFO - Sending text-only request to model deepseek-reasoner
-2025-01-24 13:10:43 - file_logger - DEBUG - Request payload preview:
-Combine these technical specifications and visual analysis into a production-ready 3D modeling prompt:  
-        
-        Product Specifications:
-        material='nickel-titanium alloy (memory metal)...
-2025-01-24 13:11:23 - file_logger - SUCCESS - API request completed successfully
-2025-01-24 13:11:23 - file_logger - DEBUG - Response metadata: Tokens used - 3625 (Prompt: 1670, Completion: 1955)
-2025-01-24 13:11:23 - file_logger - DEBUG - Response content preview:
-Create a 3D model of gold-toned eyewear with a polished nickel-titanium alloy frame (PBR roughness: 0.4, metallic: 1.0) featuring subtle surface micro-scratches and tooling marks. Model hexagonal poly...
-2025-01-24 13:11:23 - file_logger - INFO - DeepSeek client initialized with API key
-2025-01-24 13:11:23 - file_logger - DEBUG - Starting API request preparation
-2025-01-24 13:11:23 - file_logger - INFO - Sending text-only request to model deepseek-reasoner
-2025-01-24 13:11:23 - file_logger - DEBUG - Request payload preview:
-Return a valid JSON configuration for the Rodin API. Your response must be ONLY a JSON object.
-
-        Example format:
-        {
-            "prompt": "create a detailed 3D model...",
-            "co...
-2025-01-24 13:11:51 - file_logger - SUCCESS - API request completed successfully
-2025-01-24 13:11:51 - file_logger - DEBUG - Response metadata: Tokens used - 1988 (Prompt: 562, Completion: 1426)
-2025-01-24 13:11:51 - file_logger - DEBUG - Response content preview:
-{
-    "prompt": "Create a 3D model of gold-toned eyewear with a polished nickel-titanium alloy frame (PBR roughness: 0.4, metallic: 1.0) featuring subtle surface micro-scratches and tooling marks. Mod...
-2025-01-24 13:13:08 - file_logger - INFO - DeepSeek client initialized with API key
-2025-01-24 13:13:08 - file_logger - DEBUG - Starting API request preparation
-2025-01-24 13:13:08 - file_logger - INFO - Sending text-only request to model deepseek-reasoner
-2025-01-24 13:13:08 - file_logger - DEBUG - Request payload preview:
-Return a valid JSON configuration for the Rodin API. Your response must be ONLY a JSON object.
-
-        Example format:
-        {
-            "prompt": "create a detailed 3D model...",
-            "co...
-2025-01-24 13:13:29 - file_logger - SUCCESS - API request completed successfully
-2025-01-24 13:13:29 - file_logger - DEBUG - Response metadata: Tokens used - 1677 (Prompt: 562, Completion: 1115)
-2025-01-24 13:13:29 - file_logger - DEBUG - Response content preview:
-```json
-{
-    "prompt": "Create a 3D model of gold-toned eyewear with a polished nickel-titanium alloy frame (PBR roughness: 0.4, metallic: 1.0) featuring subtle surface micro-scratches and tooling ma...
-2025-01-24 13:13:29 - file_logger - INFO - Submitting Rodin job
-2025-01-24 13:15:17 - file_logger - DEBUG - Received handler object: {'model_mesh': {'url': 'https://v3.fal.media/files/tiger/CW8irvTgBJXiBAQNQ9RkH_highpoly_high_pbr.glb', 'content_type': 'application/octet-stream', 'file_name': 'highpoly_high_pbr.glb', 'file_size': 79420072}, 'seed': 57167, 'textures': []}
-2025-01-24 13:15:17 - file_logger - DEBUG - Handler type: <class 'dict'>
-2025-01-24 13:15:17 - file_logger - ERROR - Processing failed: 'dict' object has no attribute 'status'
-2025-01-24 13:33:39 - file_logger - INFO - DeepSeek client initialized with API key
-2025-01-24 13:33:40 - file_logger - DEBUG - Starting API request preparation
-2025-01-24 13:33:40 - file_logger - INFO - Sending text-only request to model deepseek-reasoner
-2025-01-24 13:33:40 - file_logger - DEBUG - Request payload preview:
-Return a valid JSON configuration for the Rodin API. Your response must be ONLY a JSON object.
-
-        Example format:
-        {
-            "prompt": "create a detailed 3D model...",
-            "co...
-2025-01-24 13:34:11 - file_logger - SUCCESS - API request completed successfully
-2025-01-24 13:34:11 - file_logger - DEBUG - Response metadata: Tokens used - 1762 (Prompt: 562, Completion: 1200)
-2025-01-24 13:34:11 - file_logger - DEBUG - Response content preview:
-{
-    "prompt": "Create a 3D model of gold-toned eyewear with a polished nickel-titanium alloy frame (PBR roughness: 0.4, metallic: 1.0) featuring subtle surface micro-scratches and tooling marks. Mod...
-2025-01-24 13:34:11 - file_logger - INFO - Submitting Rodin job
-2025-01-24 13:35:49 - file_logger - INFO - DeepSeek client initialized with API key
-2025-01-24 13:35:49 - file_logger - DEBUG - Starting API request preparation
-2025-01-24 13:35:49 - file_logger - INFO - Sending text-only request to model deepseek-reasoner
-2025-01-24 13:35:49 - file_logger - DEBUG - Request payload preview:
-Return a valid JSON configuration for the Rodin API. Your response must be ONLY a JSON object.
-
-        Example format:
-        {
-            "prompt": "create a detailed 3D model...",
-            "co...
-2025-01-24 13:36:07 - file_logger - INFO - DeepSeek client initialized with API key
-2025-01-24 13:36:07 - file_logger - DEBUG - Starting API request preparation
-2025-01-24 13:36:07 - file_logger - INFO - Sending text-only request to model deepseek-reasoner
-2025-01-24 13:36:07 - file_logger - DEBUG - Request payload preview:
-Combine these technical specifications and visual analysis into a production-ready 3D modeling prompt:  
-        
-        Product Specifications:
-        material='nickel-titanium alloy (memory metal)...
-2025-01-24 13:37:13 - file_logger - SUCCESS - API request completed successfully
-2025-01-24 13:37:13 - file_logger - DEBUG - Response metadata: Tokens used - 5073 (Prompt: 1695, Completion: 3378)
-2025-01-24 13:37:13 - file_logger - DEBUG - Response content preview:
-Create a 3D model of gold-toned eyewear with a nickel-titanium alloy memory metal frame and clear polycarbonate lenses. Use PBR values (roughness: 0.4, metallic: 1.0) for the polished gold frame, addi...
-2025-01-24 13:37:13 - file_logger - INFO - DeepSeek client initialized with API key
-2025-01-24 13:37:13 - file_logger - DEBUG - Starting API request preparation
-2025-01-24 13:37:13 - file_logger - INFO - Sending text-only request to model deepseek-reasoner
-2025-01-24 13:37:13 - file_logger - DEBUG - Request payload preview:
-Return a valid JSON configuration for the Rodin API. Your response must be ONLY a JSON object.
-
-        Example format:
-        {
-            "prompt": "create a detailed 3D model...",
-            "co...
-2025-01-24 13:37:32 - file_logger - SUCCESS - API request completed successfully
-2025-01-24 13:37:32 - file_logger - DEBUG - Response metadata: Tokens used - 1526 (Prompt: 541, Completion: 985)
-2025-01-24 13:37:32 - file_logger - DEBUG - Response content preview:
-```json
-{
-    "prompt": "Create a 3D model of gold-toned eyewear with a nickel-titanium alloy memory metal frame and clear polycarbonate lenses. Use PBR values (roughness: 0.4, metallic: 1.0) for the ...
-2025-01-24 13:37:32 - file_logger - INFO - Submitting Rodin job
-2025-01-24 13:42:06 - file_logger - DEBUG - Received handler object: {'model_mesh': {'url': 'https://v3.fal.media/files/tiger/rM3_PFMsV3AsKY0WxYwvv_highpoly_high_pbr.glb', 'content_type': 'application/octet-stream', 'file_name': 'highpoly_high_pbr.glb', 'file_size': 69673260}, 'seed': 53723, 'textures': []}
-2025-01-24 13:42:06 - file_logger - DEBUG - Handler type: <class 'dict'>
-2025-01-24 13:42:06 - file_logger - ERROR - Processing failed: 'dict' object has no attribute 'status'
-2025-01-24 14:20:44 - file_logger - INFO - DeepSeek client initialized with API key
-2025-01-24 14:20:44 - file_logger - INFO - Submitting Rodin job
-2025-01-24 14:22:38 - file_logger - DEBUG - Received handler object: {'model_mesh': {'url': 'https://v3.fal.media/files/tiger/_h_fdyKipjk0ZZr88jEVk_highpoly_high_pbr.glb', 'content_type': 'application/octet-stream', 'file_name': 'highpoly_high_pbr.glb', 'file_size': 74299896}, 'seed': 45321, 'textures': []}
-2025-01-24 14:22:38 - file_logger - DEBUG - Handler type: <class 'dict'>
-2025-01-24 14:22:38 - file_logger - ERROR - Processing failed: 'dict' object has no attribute 'status'
-2025-01-24 14:30:47 - file_logger - INFO - DeepSeek client initialized with API key
-2025-01-24 14:30:47 - file_logger - INFO - Submitting Rodin job
-2025-01-24 14:32:33 - file_logger - DEBUG - Received handler object: {'model_mesh': {'url': 'https://v3.fal.media/files/tiger/YpRHIOR87sQalibzFitoq_highpoly_high_pbr.usdz', 'content_type': 'application/octet-stream', 'file_name': 'highpoly_high_pbr.usdz', 'file_size': 85676660}, 'seed': 35769, 'textures': []}
-2025-01-24 14:32:33 - file_logger - DEBUG - Handler type: <class 'dict'>
-2025-01-24 14:32:33 - file_logger - ERROR - Processing failed: 'dict' object has no attribute 'status'
-2025-01-24 14:38:39 - file_logger - INFO - DeepSeek client initialized with API key
-2025-01-24 14:38:39 - file_logger - DEBUG - Starting API request preparation
-2025-01-24 14:38:39 - file_logger - INFO - Sending text-only request to model deepseek-reasoner
-2025-01-24 14:38:39 - file_logger - DEBUG - Request payload preview:
-Return a valid JSON configuration for the Rodin API. Your response must be ONLY a JSON object.
-
-        Example format:
-        {
-            "prompt": "create a detailed 3D model...",
-            "co...
-2025-01-24 14:39:04 - file_logger - INFO - DeepSeek client initialized with API key
-2025-01-24 14:39:04 - file_logger - DEBUG - Starting API request preparation
-2025-01-24 14:39:04 - file_logger - INFO - Sending text-only request to model deepseek-reasoner
-2025-01-24 14:39:04 - file_logger - DEBUG - Request payload preview:
-Combine these technical specifications and visual analysis into a production-ready 3D modeling prompt:  
-        
-        Product Specifications:
-        material='nickel-titanium alloy (memory metal)...
-2025-01-24 14:39:36 - file_logger - SUCCESS - API request completed successfully
-2025-01-24 14:39:36 - file_logger - DEBUG - Response metadata: Tokens used - 3496 (Prompt: 1723, Completion: 1773)
-2025-01-24 14:39:36 - file_logger - DEBUG - Response content preview:
-Create a 3D model of gold-toned eyewear with a polished nickel-titanium alloy memory metal frame (PBR roughness: 0.4, metallic: 1.0) and crystal-clear hexagonal polycarbonate lenses. Frame measurement...
-2025-01-24 14:39:36 - file_logger - INFO - DeepSeek client initialized with API key
-2025-01-24 14:39:36 - file_logger - DEBUG - Starting API request preparation
-2025-01-24 14:39:36 - file_logger - INFO - Sending text-only request to model deepseek-reasoner
-2025-01-24 14:39:36 - file_logger - DEBUG - Request payload preview:
-Return a valid JSON configuration for the Rodin API. Your response must be ONLY a JSON object.
-
-        Example format:
-        {
-            "prompt": "create a detailed 3D model...",
-            "co...
-2025-01-24 14:40:03 - file_logger - SUCCESS - API request completed successfully
-2025-01-24 14:40:03 - file_logger - DEBUG - Response metadata: Tokens used - 1880 (Prompt: 543, Completion: 1337)
-2025-01-24 14:40:03 - file_logger - DEBUG - Response content preview:
-{
-    "prompt": "Create a 3D model of gold-toned eyewear with a polished nickel-titanium alloy memory metal frame (PBR roughness: 0.4, metallic: 1.0) and crystal-clear hexagonal polycarbonate lenses. ...
-2025-01-24 14:40:03 - file_logger - INFO - Submitting Rodin job
-2025-01-24 14:41:55 - file_logger - DEBUG - Received handler object: {'model_mesh': {'url': 'https://v3.fal.media/files/elephant/XT4GJHb_pOZoLm4yXFke__highpoly_high_pbr.glb', 'content_type': 'application/octet-stream', 'file_name': 'highpoly_high_pbr.glb', 'file_size': 69350032}, 'seed': 60748, 'textures': []}
-2025-01-24 14:41:55 - file_logger - DEBUG - Handler type: <class 'dict'>
-2025-01-24 14:41:55 - file_logger - ERROR - Processing failed: 'dict' object has no attribute 'status'
-2025-01-24 15:15:15 - file_logger - INFO - DeepSeek client initialized with API key
-2025-01-24 15:15:46 - file_logger - DEBUG - Starting API request preparation
-2025-01-24 15:15:46 - file_logger - INFO - Sending text-only request to model deepseek-reasoner
-2025-01-24 15:15:46 - file_logger - DEBUG - Request payload preview:
-Extract and structure ONLY the following information from the product description:
-
-        Required Information(if available):
-        1. Frame Material (composition and finish):
-        2. Lens Type...
-2025-01-24 15:17:01 - file_logger - SUCCESS - API request completed successfully
-2025-01-24 15:17:01 - file_logger - DEBUG - Response metadata: Tokens used - 5566 (Prompt: 1742, Completion: 3824)
-2025-01-24 15:17:01 - file_logger - DEBUG - Response content preview:
+2025-01-24 17:11:34 - file_logger - SUCCESS - API request completed successfully
+2025-01-24 17:11:34 - file_logger - DEBUG - Response metadata: Tokens used - 3287 (Prompt: 1713, Completion: 1574)
+2025-01-24 17:11:34 - file_logger - DEBUG - Response content preview:
 ```json
 {
   "material": "hand-polished cellulose acetate",
-  "lens_type": "Polycarbonate (impact-resistant, anti-reflective, scratch-resistant coatings, 100% UV block)",
+  "lens_type": "Polycarbonate (anti-reflective, scratch-resistant, blocks 100% UV rays)",
   "measurements": {
-    "width...
-2025-01-24 15:18:58 - file_logger - INFO - DeepSeek client initialized with API key
-2025-01-24 15:18:58 - file_logger - DEBUG - Starting API request preparation
-2025-01-24 15:18:58 - file_logger - INFO - Sending text-only request to model deepseek-reasoner
-2025-01-24 15:18:58 - file_logger - DEBUG - Request payload preview:
+    "width": 142
+  },
+  "brandi...
+2025-01-24 17:12:50 - file_logger - INFO - DeepSeek client initialized with API key
+2025-01-24 17:12:50 - file_logger - DEBUG - Starting API request preparation
+2025-01-24 17:12:50 - file_logger - INFO - Sending text-only request to model deepseek-reasoner
+2025-01-24 17:12:50 - file_logger - DEBUG - Request payload preview:
 Combine these technical specifications and visual analysis into a production-ready 3D modeling prompt:  
         
         Product Specifications:
         material='hand-polished cellulose acetate' len...
-2025-01-24 15:19:19 - file_logger - SUCCESS - API request completed successfully
-2025-01-24 15:19:19 - file_logger - DEBUG - Response metadata: Tokens used - 2501 (Prompt: 1803, Completion: 698)
-2025-01-24 15:19:19 - file_logger - DEBUG - Response content preview:
-Create a 3D model of rectangular eyeglasses with a hand-polished cellulose acetate frame (roughness: 0.4, metallic: 0.0) in translucent olive-green, featuring tortoiseshell-colored temples. Model the ...
-2025-01-24 15:19:19 - file_logger - INFO - DeepSeek client initialized with API key
-2025-01-24 15:19:19 - file_logger - DEBUG - Starting API request preparation
-2025-01-24 15:19:19 - file_logger - INFO - Sending text-only request to model deepseek-reasoner
-2025-01-24 15:19:19 - file_logger - DEBUG - Request payload preview:
+2025-01-24 17:13:35 - file_logger - SUCCESS - API request completed successfully
+2025-01-24 17:13:35 - file_logger - DEBUG - Response metadata: Tokens used - 4617 (Prompt: 2137, Completion: 2480)
+2025-01-24 17:13:35 - file_logger - DEBUG - Response content preview:
+Create a 3D model of dark brown tortoise-shell eyeglasses with hand-polished cellulose acetate frames exhibiting a marbled pattern mixing dark brown, light brown, and tan swirls (PBR roughness: 0.4, m...
+2025-01-24 17:13:35 - file_logger - INFO - DeepSeek client initialized with API key
+2025-01-24 17:13:35 - file_logger - DEBUG - Starting API request preparation
+2025-01-24 17:13:35 - file_logger - INFO - Sending text-only request to model deepseek-reasoner
+2025-01-24 17:13:35 - file_logger - DEBUG - Request payload preview:
 Return a valid JSON configuration for the Rodin API. Your response must be ONLY a JSON object.
 
         Example format:
         {
             "prompt": "create a detailed 3D model...",
             "co...
-2025-01-24 15:19:34 - file_logger - SUCCESS - API request completed successfully
-2025-01-24 15:19:34 - file_logger - DEBUG - Response metadata: Tokens used - 1351 (Prompt: 627, Completion: 724)
-2025-01-24 15:19:34 - file_logger - DEBUG - Response content preview:
+2025-01-24 17:14:23 - file_logger - INFO - DeepSeek client initialized with API key
+2025-01-24 17:14:23 - file_logger - DEBUG - Starting API request preparation
+2025-01-24 17:14:23 - file_logger - INFO - Sending text-only request to model deepseek-reasoner
+2025-01-24 17:14:23 - file_logger - DEBUG - Request payload preview:
+Return a valid JSON configuration for the Rodin API. Your response must be ONLY a JSON object.
+
+        Example format:
+        {
+            "prompt": "create a detailed 3D model...",
+            "co...
+2025-01-24 17:14:56 - file_logger - SUCCESS - API request completed successfully
+2025-01-24 17:14:56 - file_logger - DEBUG - Response metadata: Tokens used - 2513 (Prompt: 614, Completion: 1899)
+2025-01-24 17:14:56 - file_logger - DEBUG - Response content preview:
 {
-    "prompt": "Create a 3D model of rectangular eyeglasses with a hand-polished cellulose acetate frame (roughness: 0.4, metallic: 0.0) in translucent olive-green, featuring tortoiseshell-colored te...
-2025-01-24 15:19:34 - file_logger - INFO - Submitting Rodin job
-2025-01-24 15:21:23 - file_logger - DEBUG - Received handler object: {'model_mesh': {'url': 'https://v3.fal.media/files/elephant/q3nY5tpXJOI08i5dkNN_N_highpoly_high_pbr.glb', 'content_type': 'application/octet-stream', 'file_name': 'highpoly_high_pbr.glb', 'file_size': 65216524}, 'seed': 62618, 'textures': []}
-2025-01-24 15:21:23 - file_logger - DEBUG - Handler type: <class 'dict'>
-2025-01-24 15:21:23 - file_logger - ERROR - Processing failed: 'dict' object has no attribute 'status'
+    "prompt": "Create a 3D model of dark brown tortoise-shell eyeglasses with hand-polished cellulose acetate frames exhibiting a marbled pattern mixing dark brown, light brown, and tan swirls (PBR ...
+2025-01-24 17:14:56 - file_logger - INFO - Submitting Rodin job
+2025-01-24 17:17:08 - file_logger - DEBUG - Received handler object: {'model_mesh': {'url': 'https://v3.fal.media/files/panda/xKPxLiqnlv66R-kLlMp-K_highpoly_high_pbr.glb', 'content_type': 'application/octet-stream', 'file_name': 'highpoly_high_pbr.glb', 'file_size': 66006420}, 'seed': 48922, 'textures': []}
+2025-01-24 17:17:08 - file_logger - DEBUG - Handler type: <class 'dict'>
+2025-01-24 17:17:08 - file_logger - ERROR - Processing failed: 'dict' object has no attribute 'status'

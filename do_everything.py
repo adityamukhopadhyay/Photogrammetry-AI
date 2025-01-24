@@ -126,7 +126,13 @@ else:
                     - Specify material PBR values (roughness 0-1 scale)
                     - Maintain technical terminology
 
-                    need very detailed output!!!!(in more than 5 descriptive paragraphs)"""
+                    need very detailed output!!!!(in more than 5 descriptive paragraphs)
+                    Give the best possible explainations for colors, materials, design details and textures.
+                    
+                    Dont get confused with glasses body's color and the color of the lenses.
+                    carefully analyze the image and provide the details of the glasses body color and the color of the lenses seperately(because lenses will mostly be transparent like this polycarbonate lenses (refractive index: 1.49) with crystal-clear transparency (0.0 color intensity),).
+
+                    """
 
     # options = webdriver.ChromeOptions() 
     # options.add_argument("user-data-dir=/Users/adityamukhopadhyay/Library/Application Support/Google/Chrome/")
@@ -217,8 +223,6 @@ else:
             file.write(vision_analysis)
         print("Saved vision analysis to 'vision_analysis.txt'")
 
-        # Wait for 5 seconds before taking the screenshot
-        time.sleep(5)
 
         # Take a screenshot and save it
         screenshot_path = "screenshot.png"
