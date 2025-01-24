@@ -5,3 +5,6 @@ __pycache__/
 *.json
 *.txt
 *.glb.env
+data/
+temp_data/
+tests/
