@@ -1,9 +1,0 @@
-Create a 3D model of a pair of brown-toned eyeglasses with a frame made of hand-polished cellulose acetate, exhibiting a marbled pattern with varying shades of brown and a smooth, glossy finish (PBR roughness: 0.4, metallic: 0.0). The lenses should be clear polycarbonate with anti-reflective and scratch-resistant coatings, ensuring 100% UV ray blocking, and a refractive index of 1.49. Set the frame width measurements to 134mm for medium and 138mm for wide, maintaining precise geometric alignment across front (0°) and angled (45°) views, including bridge curvature radius (±0.2mm tolerance), temple arm taper gradient, and lens bevel angle (edge thickness profile).  
-
-Include "Warby Parker" branding etched onto the right temple, positioned 10mm from the hinge centerpoint, with printed engraving details (sans-serif font, 2.5mm height, following temple curvature with a 3° radial offset). Add graduated rivets on the temples for structural support, ensuring a polished finish (PBR metallic: 0.0, roughness: 0.4).  
-
-Model the hinge as a standard barrel hinge with 3-5 components, spring tension of 500-700gf, and M1.4×3mm flathead screws. Nose pads should be integrated into the acetate frame design without additional adjustability.  
-
-Ensure the lens optical properties include a base curve within the 4-8 diopter range, an ABBE value ≥30, and a 0.5mm matte bevel edge polish. Maintain consistency in surface normal alignment and prevent texture UV stretching, color value mismatches (ΔE < 2.0), and edge detailing errors (0.1mm feature resolution).  
-
-Reflect the oversized lens design, handsome brow bar, and smooth, glossy surface finish throughout the model, emphasizing brand identity and mechanical accuracy.

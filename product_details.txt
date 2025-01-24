@@ -1,1 +1,1 @@
-material='nickel-titanium alloy (memory metal)' lens_type='polycarbonate (impact-resistant, anti-reflective, scratch-resistant, 100% UV protection)' measurements={'narrow': 128, 'medium': 131, 'wide': 138} branding=[] features=['silicone nose pads', 'hexagonal lenses'] roughness=0.4 metallic=1.0 ior=1.49
+material='hand-polished cellulose acetate' lens_type='Polycarbonate (impact-resistant, anti-reflective, scratch-resistant coatings, 100% UV block)' measurements={'width': 133} branding=['Graduated Rivet design detail'] features=[] roughness=0.4 metallic=0.0 ior=1.49

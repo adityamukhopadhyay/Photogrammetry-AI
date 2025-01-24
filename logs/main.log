@@ -1329,3 +1329,52 @@ Return a valid JSON configuration for the Rodin API. Your response must be ONLY 
 2025-01-24 14:41:55 - file_logger - DEBUG - Received handler object: {'model_mesh': {'url': 'https://v3.fal.media/files/elephant/XT4GJHb_pOZoLm4yXFke__highpoly_high_pbr.glb', 'content_type': 'application/octet-stream', 'file_name': 'highpoly_high_pbr.glb', 'file_size': 69350032}, 'seed': 60748, 'textures': []}
 2025-01-24 14:41:55 - file_logger - DEBUG - Handler type: <class 'dict'>
 2025-01-24 14:41:55 - file_logger - ERROR - Processing failed: 'dict' object has no attribute 'status'
+2025-01-24 15:15:15 - file_logger - INFO - DeepSeek client initialized with API key
+2025-01-24 15:15:46 - file_logger - DEBUG - Starting API request preparation
+2025-01-24 15:15:46 - file_logger - INFO - Sending text-only request to model deepseek-reasoner
+2025-01-24 15:15:46 - file_logger - DEBUG - Request payload preview:
+Extract and structure ONLY the following information from the product description:
+
+        Required Information(if available):
+        1. Frame Material (composition and finish):
+        2. Lens Type...
+2025-01-24 15:17:01 - file_logger - SUCCESS - API request completed successfully
+2025-01-24 15:17:01 - file_logger - DEBUG - Response metadata: Tokens used - 5566 (Prompt: 1742, Completion: 3824)
+2025-01-24 15:17:01 - file_logger - DEBUG - Response content preview:
+```json
+{
+  "material": "hand-polished cellulose acetate",
+  "lens_type": "Polycarbonate (impact-resistant, anti-reflective, scratch-resistant coatings, 100% UV block)",
+  "measurements": {
+    "width...
+2025-01-24 15:18:58 - file_logger - INFO - DeepSeek client initialized with API key
+2025-01-24 15:18:58 - file_logger - DEBUG - Starting API request preparation
+2025-01-24 15:18:58 - file_logger - INFO - Sending text-only request to model deepseek-reasoner
+2025-01-24 15:18:58 - file_logger - DEBUG - Request payload preview:
+Combine these technical specifications and visual analysis into a production-ready 3D modeling prompt:  
+        
+        Product Specifications:
+        material='hand-polished cellulose acetate' len...
+2025-01-24 15:19:19 - file_logger - SUCCESS - API request completed successfully
+2025-01-24 15:19:19 - file_logger - DEBUG - Response metadata: Tokens used - 2501 (Prompt: 1803, Completion: 698)
+2025-01-24 15:19:19 - file_logger - DEBUG - Response content preview:
+Create a 3D model of rectangular eyeglasses with a hand-polished cellulose acetate frame (roughness: 0.4, metallic: 0.0) in translucent olive-green, featuring tortoiseshell-colored temples. Model the ...
+2025-01-24 15:19:19 - file_logger - INFO - DeepSeek client initialized with API key
+2025-01-24 15:19:19 - file_logger - DEBUG - Starting API request preparation
+2025-01-24 15:19:19 - file_logger - INFO - Sending text-only request to model deepseek-reasoner
+2025-01-24 15:19:19 - file_logger - DEBUG - Request payload preview:
+Return a valid JSON configuration for the Rodin API. Your response must be ONLY a JSON object.
+
+        Example format:
+        {
+            "prompt": "create a detailed 3D model...",
+            "co...
+2025-01-24 15:19:34 - file_logger - SUCCESS - API request completed successfully
+2025-01-24 15:19:34 - file_logger - DEBUG - Response metadata: Tokens used - 1351 (Prompt: 627, Completion: 724)
+2025-01-24 15:19:34 - file_logger - DEBUG - Response content preview:
+{
+    "prompt": "Create a 3D model of rectangular eyeglasses with a hand-polished cellulose acetate frame (roughness: 0.4, metallic: 0.0) in translucent olive-green, featuring tortoiseshell-colored te...
+2025-01-24 15:19:34 - file_logger - INFO - Submitting Rodin job
+2025-01-24 15:21:23 - file_logger - DEBUG - Received handler object: {'model_mesh': {'url': 'https://v3.fal.media/files/elephant/q3nY5tpXJOI08i5dkNN_N_highpoly_high_pbr.glb', 'content_type': 'application/octet-stream', 'file_name': 'highpoly_high_pbr.glb', 'file_size': 65216524}, 'seed': 62618, 'textures': []}
+2025-01-24 15:21:23 - file_logger - DEBUG - Handler type: <class 'dict'>
+2025-01-24 15:21:23 - file_logger - ERROR - Processing failed: 'dict' object has no attribute 'status'

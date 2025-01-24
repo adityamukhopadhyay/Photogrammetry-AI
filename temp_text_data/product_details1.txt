@@ -1,1 +1,0 @@
-material='hand-polished cellulose acetate' lens_type='Polycarbonate' measurements={'Medium': 134, 'Wide': 138, 'Medium Wide': 134} branding=['Graduated Rivets'] features=['Oversized lenses', 'handsome brow bar', 'anti-reflective and scratch-resistant lens coatings', '100% UV ray blocking'] roughness=0.4 metallic=0.0 ior=1.49

@@ -11,6 +11,7 @@ from src.llm.deepseek_client import DeepSeekClient
 import asyncio
 import time
 import os
+import json
 from src.prompt_engineering import PromptGenerator
 from src.prompt_engineering import ConfigGenerator
 from src.rodin_integration import ModelProcessor
@@ -33,32 +34,32 @@ else:
     # Initialize DeepSeek client
     product_details = None
 
-    async def main():
-        global product_details
-        llm_client = DeepSeekClient()
-        product_url = input("Enter Warby Parker product URL: ")
+    # async def main():
+    #     global product_details
+    #     llm_client = DeepSeekClient()
+    #     product_url = input("Enter Warby Parker product URL: ")
 
-        scraper = WarbyScraper(llm=llm_client)
-        product_details = await scraper.scrape(product_url)
-        print("\n\nExtracted Product Details:\n", product_details)
+    #     scraper = WarbyScraper(llm=llm_client)
+    #     product_details = await scraper.scrape(product_url)
+    #     print("\n\nExtracted Product Details:\n", product_details)
 
-        print("\n\nExtracted Image URLs:")
-        print(scraper.image_urls[0]+'\n'+
-        scraper.image_urls[1])
-        # Save image URLs to a text file
-        with open("img_list.txt", "w") as file:
-            file.write(scraper.image_urls[0] + '\n' + scraper.image_urls[1])
-        print("Saved image URLs to 'img_list.txt'")
+    #     print("\n\nExtracted Image URLs:")
+    #     print(scraper.image_urls[0]+'\n'+
+    #     scraper.image_urls[1])
+    #     # Save image URLs to a text file
+    #     with open("img_list.txt", "w") as file:
+    #         file.write(scraper.image_urls[0] + '\n' + scraper.image_urls[1])
+    #     print("Saved image URLs to 'img_list.txt'")
 
-        # Your image URL to input
-        img_url.append(scraper.image_urls[0])
+    #     # Your image URL to input
+    #     img_url.append(scraper.image_urls[0])
 
-            # Save product details to a text file
-        with open("product_details.txt", "w") as file:
-            file.write(str(product_details))
+    #         # Save product details to a text file
+    #     with open("product_details.txt", "w") as file:
+    #         file.write(str(product_details))
 
     # Set up the WebDriver service
-    asyncio.run(main())
+    # asyncio.run(main())
     vision_instructions = """Analyze these eyewear images and extract these specific details(if present):
                     1. Frame Material Analysis:
                     - Identify material type (acetate, titanium, stainless steel, etc.)
@@ -70,11 +71,11 @@ else:
                     - Document material thickness variations (temple vs front)
 
                     2. Logo & Branding Elements:
-                    - Locate exact placement of "WARBY PARKER" text:
-                    • Side (left/right temple)
+                    - Locate and look for exact placement of "WARBY PARKER" text(if present):
+                    • Side (left temple)
                     • Position from hinge (e.g., 10mm from hinge on left temple)
                     • Engraving depth and style (embossed/debossed/printed)
-                    . Etch the text "WARBY PARKER" onto the left temple of the frame.
+                    . Etch the text "WARBY PARKER" onto the left temple of the frame(if exists).
                     . The text should be embossed and in all caps.
                     . The text should be positioned 10mm from the hinge on the inside of the left temple.
                     . Rest of the temple arms should be plain (detailed textured as per the image) without any text or logo markings.
@@ -252,72 +253,38 @@ else:
     asyncio.run(generate_final_prompt())
 
 
-async def process_with_rodin():
-    # Load the final prompt from the text file
-    with open("final_prompt.txt", "r") as file:
-        final_prompt = file.read()
+# async def process_with_rodin():
+#     # Load the final prompt from the text file
+#     with open("final_prompt.txt", "r") as file:
+#         final_prompt = file.read()
 
-    # Initialize the ConfigGenerator with the LLM client
-    llm_client = DeepSeekClient()
-    config_generator = ConfigGenerator(llm=llm_client)
-
-    # Generate the configuration
-    with open("img_list.txt", "r") as file:
-        image_urls = file.read().splitlines()
-    config = await config_generator.generate_config(final_prompt, image_urls)
-    print("\nGenerated Rodin configuration:", config)
-
-    # Initialize the ModelProcessor and process the product
-    processor = ModelProcessor()
-    result = processor.process_product(config)
-    print("\nProcessed product:", result)
-
-    # Save the result
-    product_id = "example_product_id"  # Replace with actual product ID if available
-    output_path = processor.api.save_result(result, product_id)
-    print(f"Model and textures saved to: {output_path}")
-
-asyncio.run(process_with_rodin())
-
-# # Initialize logging
-# logger = configure_logger()
-# logger.info("Application started")
-
-# async def main(product_url):
-#     load_dotenv()
-    
-#     # Initialize DeepSeek client
+#     # Initialize the ConfigGenerator with the LLM client
 #     llm_client = DeepSeekClient()
-    
-#     # Initialize components
-#     downloader = ImageDownloader()
-#     enhancer = ImageEnhancer()
-    
-#     # Scrape product data
-#     scraper = WarbyScraper(llm=llm_client)
-#     specs = await scraper.scrape(product_url)
-    
-#     # Download and process images
-#     image_paths = downloader.download([product_url + "/images"])
-#     enhanced_paths = [enhancer.enhance(p) for p in image_paths]
-    
-#     # Generate prompt
-#     prompt_gen = PromptGenerator(llm=llm_client)
-#     prompt_text = await prompt_gen.generate(specs, enhanced_paths)
-#     FileManager.save_prompt(prompt_text, specs.product_id)
-    
-#     # Generate Rodin config
-#     config_gen = ConfigGenerator(llm=llm_client)
-#     config = await config_gen.generate_config(prompt_text, enhanced_paths)
-#     FileManager.save_config(config, specs.product_id)
-    
-#     # Submit to Rodin
-#     rodin = RodinAPI()
-#     result = rodin.submit_job(config)
-#     output_dir = rodin.save_result(result, specs.product_id)
-    
-#     print(f"3D model generated at: {output_dir}")
+#     if os.path.exists("config.json"):
+#         with open("config.json", "r") as file:
+#             config = json.load(file)
+#         print("Loaded config from 'config.json'")
+#     else:
+#         config_generator = ConfigGenerator(llm=llm_client)
 
-# if __name__ == "__main__":
-#     product_url = input("Enter Warby Parker product URL: ")
-#     asyncio.run(main(product_url))
+#         # Generate the configuration
+#         with open("img_list.txt", "r") as file:
+#             image_urls = file.read().splitlines()
+#         config = await config_generator.generate_config(final_prompt, image_urls)
+#         print("\nGenerated Rodin configuration:", config)
+
+#         # Save the generated config to a JSON file
+#         with open("config.json", "w") as file:
+#             json.dump(config, file, indent=2)
+#         print("Saved generated config to 'config.json'")
+
+#     # Initialize the ModelProcessor and process the product
+#     processor = ModelProcessor()
+#     result = processor.process_product(config)
+#     print("\nProcessed product:", result)
+
+#  # Replace with actual product ID if available
+#     output_path = processor.api.save_result(result)
+#     print(f"Model and textures saved to: {output_path}")
+
+# asyncio.run(process_with_rodin())

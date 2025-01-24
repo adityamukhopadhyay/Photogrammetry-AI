@@ -1,8 +1,8 @@
 {
-  "prompt": "Create a 3D model of gold-toned eyewear with a polished nickel-titanium alloy memory metal frame (PBR roughness: 0.4, metallic: 1.0) and crystal-clear hexagonal polycarbonate lenses. Frame measurements: narrow 128mm, medium 131mm, wide 138mm. Model lenses as fully transparent (color intensity 0.0) with anti-reflective, scratch-resistant coatings and 100% UV protection (refractive index: 1.49). Include subtle surface micro-scratches on metal surfaces using imperfection maps. Integrate silicone nose pads (Shore 50A) and hidden 3-component barrel hinges with M1.4\u00d73mm screws. Maintain precise bridge curvature (\u00b10.2mm tolerance) and temple taper matching reference images. Ensure lens edges have 0.5mm matte bevels with no tint gradient. Exclude all branding elements per visual analysis. Prevent UV stretching artifacts and maintain 0.1mm feature resolution. Prioritize image-based proportions for frame thickness and hinge visibility. Image URLs: ['https://i.warbycdn.com/s/c/7c0fd8dfb6817586c87a4d4035012f3621480728', 'https://i.warbycdn.com/s/c/e26eef48218e1b762ce4d8e9e617ab19835b2cf5']",
+  "prompt": "Create a 3D model of rectangular eyeglasses with a hand-polished cellulose acetate frame (roughness: 0.4, metallic: 0.0) in translucent olive-green, featuring tortoiseshell-colored temples. Model the frame as a single-layer acetate construction with smooth surface finish and micro-scratch/texturing maps. Polycarbonate lenses (refractive index: 1.49) with anti-reflective coating, 0.5mm matte edge bevel, UV-blocking, and scratch-resistant treatment. Include M1.4\u00d73mm hinges with 600gf spring tension, medical-grade silicone nose pads (Shore 50A), and engraved 'WARBY PARKER' text with specified dimensions. Maintain 133mm frame width \u00b10.2mm tolerance and 100% lens transparency.",
   "input_image_urls": [
-    "https://i.warbycdn.com/s/c/7c0fd8dfb6817586c87a4d4035012f3621480728",
-    "https://i.warbycdn.com/s/c/e26eef48218e1b762ce4d8e9e617ab19835b2cf5"
+    "https://i.warbycdn.com/s/c/85481590ae14c7d726d87cb65604b1a01de4ce4f",
+    "https://i.warbycdn.com/s/c/44aa78a99985f6c4284b285d83bb934435a0d536"
   ],
   "condition_mode": "concat",
   "geometry_file_format": "glb",
