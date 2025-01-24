@@ -260,18 +260,23 @@ async def process_with_rodin():
 
     # Initialize the ConfigGenerator with the LLM client
     llm_client = DeepSeekClient()
-    config_generator = ConfigGenerator(llm=llm_client)
+    if os.path.exists("config.json"):
+        with open("config.json", "r") as file:
+            config = json.load(file)
+        print("Loaded config from 'config.json'")
+    else:
+        config_generator = ConfigGenerator(llm=llm_client)
 
-    # Generate the configuration
-    with open("img_list.txt", "r") as file:
-        image_urls = file.read().splitlines()
-    config = await config_generator.generate_config(final_prompt, image_urls)
-    print("\nGenerated Rodin configuration:", config)
+        # Generate the configuration
+        with open("img_list.txt", "r") as file:
+            image_urls = file.read().splitlines()
+        config = await config_generator.generate_config(final_prompt, image_urls)
+        print("\nGenerated Rodin configuration:", config)
 
-    # Save the generated config to a JSON file
-    with open("config.json", "w") as file:
-        json.dump(config, file, indent=2)
-    print("Saved generated config to 'config.json'")
+        # Save the generated config to a JSON file
+        with open("config.json", "w") as file:
+            json.dump(config, file, indent=2)
+        print("Saved generated config to 'config.json'")
 
     # Initialize the ModelProcessor and process the product
     processor = ModelProcessor()

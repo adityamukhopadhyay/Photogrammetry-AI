@@ -1220,3 +1220,112 @@ Return a valid JSON configuration for the Rodin API. Your response must be ONLY 
 2025-01-24 13:15:17 - file_logger - DEBUG - Received handler object: {'model_mesh': {'url': 'https://v3.fal.media/files/tiger/CW8irvTgBJXiBAQNQ9RkH_highpoly_high_pbr.glb', 'content_type': 'application/octet-stream', 'file_name': 'highpoly_high_pbr.glb', 'file_size': 79420072}, 'seed': 57167, 'textures': []}
 2025-01-24 13:15:17 - file_logger - DEBUG - Handler type: <class 'dict'>
 2025-01-24 13:15:17 - file_logger - ERROR - Processing failed: 'dict' object has no attribute 'status'
+2025-01-24 13:33:39 - file_logger - INFO - DeepSeek client initialized with API key
+2025-01-24 13:33:40 - file_logger - DEBUG - Starting API request preparation
+2025-01-24 13:33:40 - file_logger - INFO - Sending text-only request to model deepseek-reasoner
+2025-01-24 13:33:40 - file_logger - DEBUG - Request payload preview:
+Return a valid JSON configuration for the Rodin API. Your response must be ONLY a JSON object.
+
+        Example format:
+        {
+            "prompt": "create a detailed 3D model...",
+            "co...
+2025-01-24 13:34:11 - file_logger - SUCCESS - API request completed successfully
+2025-01-24 13:34:11 - file_logger - DEBUG - Response metadata: Tokens used - 1762 (Prompt: 562, Completion: 1200)
+2025-01-24 13:34:11 - file_logger - DEBUG - Response content preview:
+{
+    "prompt": "Create a 3D model of gold-toned eyewear with a polished nickel-titanium alloy frame (PBR roughness: 0.4, metallic: 1.0) featuring subtle surface micro-scratches and tooling marks. Mod...
+2025-01-24 13:34:11 - file_logger - INFO - Submitting Rodin job
+2025-01-24 13:35:49 - file_logger - INFO - DeepSeek client initialized with API key
+2025-01-24 13:35:49 - file_logger - DEBUG - Starting API request preparation
+2025-01-24 13:35:49 - file_logger - INFO - Sending text-only request to model deepseek-reasoner
+2025-01-24 13:35:49 - file_logger - DEBUG - Request payload preview:
+Return a valid JSON configuration for the Rodin API. Your response must be ONLY a JSON object.
+
+        Example format:
+        {
+            "prompt": "create a detailed 3D model...",
+            "co...
+2025-01-24 13:36:07 - file_logger - INFO - DeepSeek client initialized with API key
+2025-01-24 13:36:07 - file_logger - DEBUG - Starting API request preparation
+2025-01-24 13:36:07 - file_logger - INFO - Sending text-only request to model deepseek-reasoner
+2025-01-24 13:36:07 - file_logger - DEBUG - Request payload preview:
+Combine these technical specifications and visual analysis into a production-ready 3D modeling prompt:  
+        
+        Product Specifications:
+        material='nickel-titanium alloy (memory metal)...
+2025-01-24 13:37:13 - file_logger - SUCCESS - API request completed successfully
+2025-01-24 13:37:13 - file_logger - DEBUG - Response metadata: Tokens used - 5073 (Prompt: 1695, Completion: 3378)
+2025-01-24 13:37:13 - file_logger - DEBUG - Response content preview:
+Create a 3D model of gold-toned eyewear with a nickel-titanium alloy memory metal frame and clear polycarbonate lenses. Use PBR values (roughness: 0.4, metallic: 1.0) for the polished gold frame, addi...
+2025-01-24 13:37:13 - file_logger - INFO - DeepSeek client initialized with API key
+2025-01-24 13:37:13 - file_logger - DEBUG - Starting API request preparation
+2025-01-24 13:37:13 - file_logger - INFO - Sending text-only request to model deepseek-reasoner
+2025-01-24 13:37:13 - file_logger - DEBUG - Request payload preview:
+Return a valid JSON configuration for the Rodin API. Your response must be ONLY a JSON object.
+
+        Example format:
+        {
+            "prompt": "create a detailed 3D model...",
+            "co...
+2025-01-24 13:37:32 - file_logger - SUCCESS - API request completed successfully
+2025-01-24 13:37:32 - file_logger - DEBUG - Response metadata: Tokens used - 1526 (Prompt: 541, Completion: 985)
+2025-01-24 13:37:32 - file_logger - DEBUG - Response content preview:
+```json
+{
+    "prompt": "Create a 3D model of gold-toned eyewear with a nickel-titanium alloy memory metal frame and clear polycarbonate lenses. Use PBR values (roughness: 0.4, metallic: 1.0) for the ...
+2025-01-24 13:37:32 - file_logger - INFO - Submitting Rodin job
+2025-01-24 13:42:06 - file_logger - DEBUG - Received handler object: {'model_mesh': {'url': 'https://v3.fal.media/files/tiger/rM3_PFMsV3AsKY0WxYwvv_highpoly_high_pbr.glb', 'content_type': 'application/octet-stream', 'file_name': 'highpoly_high_pbr.glb', 'file_size': 69673260}, 'seed': 53723, 'textures': []}
+2025-01-24 13:42:06 - file_logger - DEBUG - Handler type: <class 'dict'>
+2025-01-24 13:42:06 - file_logger - ERROR - Processing failed: 'dict' object has no attribute 'status'
+2025-01-24 14:20:44 - file_logger - INFO - DeepSeek client initialized with API key
+2025-01-24 14:20:44 - file_logger - INFO - Submitting Rodin job
+2025-01-24 14:22:38 - file_logger - DEBUG - Received handler object: {'model_mesh': {'url': 'https://v3.fal.media/files/tiger/_h_fdyKipjk0ZZr88jEVk_highpoly_high_pbr.glb', 'content_type': 'application/octet-stream', 'file_name': 'highpoly_high_pbr.glb', 'file_size': 74299896}, 'seed': 45321, 'textures': []}
+2025-01-24 14:22:38 - file_logger - DEBUG - Handler type: <class 'dict'>
+2025-01-24 14:22:38 - file_logger - ERROR - Processing failed: 'dict' object has no attribute 'status'
+2025-01-24 14:30:47 - file_logger - INFO - DeepSeek client initialized with API key
+2025-01-24 14:30:47 - file_logger - INFO - Submitting Rodin job
+2025-01-24 14:32:33 - file_logger - DEBUG - Received handler object: {'model_mesh': {'url': 'https://v3.fal.media/files/tiger/YpRHIOR87sQalibzFitoq_highpoly_high_pbr.usdz', 'content_type': 'application/octet-stream', 'file_name': 'highpoly_high_pbr.usdz', 'file_size': 85676660}, 'seed': 35769, 'textures': []}
+2025-01-24 14:32:33 - file_logger - DEBUG - Handler type: <class 'dict'>
+2025-01-24 14:32:33 - file_logger - ERROR - Processing failed: 'dict' object has no attribute 'status'
+2025-01-24 14:38:39 - file_logger - INFO - DeepSeek client initialized with API key
+2025-01-24 14:38:39 - file_logger - DEBUG - Starting API request preparation
+2025-01-24 14:38:39 - file_logger - INFO - Sending text-only request to model deepseek-reasoner
+2025-01-24 14:38:39 - file_logger - DEBUG - Request payload preview:
+Return a valid JSON configuration for the Rodin API. Your response must be ONLY a JSON object.
+
+        Example format:
+        {
+            "prompt": "create a detailed 3D model...",
+            "co...
+2025-01-24 14:39:04 - file_logger - INFO - DeepSeek client initialized with API key
+2025-01-24 14:39:04 - file_logger - DEBUG - Starting API request preparation
+2025-01-24 14:39:04 - file_logger - INFO - Sending text-only request to model deepseek-reasoner
+2025-01-24 14:39:04 - file_logger - DEBUG - Request payload preview:
+Combine these technical specifications and visual analysis into a production-ready 3D modeling prompt:  
+        
+        Product Specifications:
+        material='nickel-titanium alloy (memory metal)...
+2025-01-24 14:39:36 - file_logger - SUCCESS - API request completed successfully
+2025-01-24 14:39:36 - file_logger - DEBUG - Response metadata: Tokens used - 3496 (Prompt: 1723, Completion: 1773)
+2025-01-24 14:39:36 - file_logger - DEBUG - Response content preview:
+Create a 3D model of gold-toned eyewear with a polished nickel-titanium alloy memory metal frame (PBR roughness: 0.4, metallic: 1.0) and crystal-clear hexagonal polycarbonate lenses. Frame measurement...
+2025-01-24 14:39:36 - file_logger - INFO - DeepSeek client initialized with API key
+2025-01-24 14:39:36 - file_logger - DEBUG - Starting API request preparation
+2025-01-24 14:39:36 - file_logger - INFO - Sending text-only request to model deepseek-reasoner
+2025-01-24 14:39:36 - file_logger - DEBUG - Request payload preview:
+Return a valid JSON configuration for the Rodin API. Your response must be ONLY a JSON object.
+
+        Example format:
+        {
+            "prompt": "create a detailed 3D model...",
+            "co...
+2025-01-24 14:40:03 - file_logger - SUCCESS - API request completed successfully
+2025-01-24 14:40:03 - file_logger - DEBUG - Response metadata: Tokens used - 1880 (Prompt: 543, Completion: 1337)
+2025-01-24 14:40:03 - file_logger - DEBUG - Response content preview:
+{
+    "prompt": "Create a 3D model of gold-toned eyewear with a polished nickel-titanium alloy memory metal frame (PBR roughness: 0.4, metallic: 1.0) and crystal-clear hexagonal polycarbonate lenses. ...
+2025-01-24 14:40:03 - file_logger - INFO - Submitting Rodin job
+2025-01-24 14:41:55 - file_logger - DEBUG - Received handler object: {'model_mesh': {'url': 'https://v3.fal.media/files/elephant/XT4GJHb_pOZoLm4yXFke__highpoly_high_pbr.glb', 'content_type': 'application/octet-stream', 'file_name': 'highpoly_high_pbr.glb', 'file_size': 69350032}, 'seed': 60748, 'textures': []}
+2025-01-24 14:41:55 - file_logger - DEBUG - Handler type: <class 'dict'>
+2025-01-24 14:41:55 - file_logger - ERROR - Processing failed: 'dict' object has no attribute 'status'
