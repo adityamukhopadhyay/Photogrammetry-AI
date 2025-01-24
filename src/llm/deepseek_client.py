@@ -14,28 +14,12 @@ class DeepSeekClient:
         )
         self.logger.info("DeepSeek client initialized with API key")
         
-    async def ainvoke(self, prompt: str, images: list = None, model: str = "deepseek-chat"):
+    async def ainvoke(self, prompt: str, images: list = None, model: str = "deepseek-reasoner"):
         """Process text and/or images with detailed logging"""
         try:
             self.logger.debug("Starting API request preparation")
             messages = [{"role": "user", "content": prompt}]
             operation_type = "text-only"
-            
-            if images:
-                self.logger.info(f"Processing {len(images)} images with vision model")
-                messages[0]["content"] = [{"type": "text", "text": prompt}]
-                
-                for idx, img_path in enumerate(images, 1):
-                    encoded_image = await self._encode_image(img_path)
-                    messages[0]["content"].append({
-                        "type": "image_url",
-                        "image_url": {"url": encoded_image}
-                    })
-                    self.logger.debug(f"Added image {idx}/{len(images)}: {Path(img_path).name}")
-                
-                model = "deepseek-vision"
-                operation_type = "multimodal"
-                self.logger.info(f"Final model set to {model} with {len(images)} images")
 
             self.logger.info(f"Sending {operation_type} request to model {model}")
             self.logger.debug(f"Request payload preview:\n{messages[0]['content'][:200]}...")

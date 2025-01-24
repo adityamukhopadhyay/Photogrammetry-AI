@@ -143,7 +143,7 @@ class PromptGenerator:
         4. Includes precise mechanical component descriptions
         5. Maintains brand identity elements
 
-        Technical Requirements(example):
+        Technical Requirements that must be included if available, based on the {base_prompt} and {vision_analysis}:
         1. Material Properties:
         - Specify PBR values: roughness (0.0-1.0), metallic (0.0-1.0)
         - Detail material layering (acetate core/lamination)
@@ -186,7 +186,28 @@ class PromptGenerator:
 
         !!All the above points should be based on the provided Product specifications and visual analysis ONLY!!
         
-        Output ONLY the final 3D prompt with no additional formatting.
-        It should also have lines like Create a 3D model of a pair of glasses based on the given specifications and visual analysis of the glasses."""
+        !!Output ONLY the final 3D prompt with no additional formatting.!!
+        !!It should also have lines like Create a 3D model of a pair of glasses based on the given specifications and visual analysis of the glasses.({base_prompt} and {vision_analysis})!!
+        
+        example prompt that works: 
+        'Create a 3D model of brown tortoise-shell eyeglasses with a frame made of polished cellulose acetate. Ensure the frame exhibits a marbled pattern with varying shades of brown, maintaining a glossy finish (PBR roughness: 0.1-0.2, metallic: 0).
+        Include "Warby Parker" branding etched onto the left temple, positioned precisely 10mm from the hinge, with debossed engraving details.
+        Model the lens as clear polycarbonate with anti-reflective and scratch-resistant coatings, ensuring full UV protection. Set transparency and reflectivity to represent these optical properties accurately.
+        Set the frame width measurements to 134mm for medium and 138mm for wide.
+        Incorporate small metallic rivets on the temples with a polished finish (PBR metallic: 0.8, roughness: 0.1).
+        Add standard metal hinges for the temple arms, ensuring mechanical accuracy and alignment with the frame material.
+        Model the nose pads as part of the acetate frame design without additional adjustability.
+        Ensure the lens refractive index is set to 1.586 to match standard polycarbonate material properties.
+        Reflect the smooth, glossy surface of the acetate frame throughout the model, ensuring consistency across temple arms and the brow bar.
+        Maintain the oversized lens design and signature graduated rivet details, emphasizing their placement and alignment for brand identity preservation.'
+
+        !!!!Important Note: If there's no mentioned tint on the glasess lens, then the tint should be clear, transparent and the color intensity should be 0.0
+        Prompt should also majorly focus on the uploaded images to determine how it should look
+        Glass lenses will almost always be fully transparent or might have a very subtle tint but lens will be transparent(use 3D terminologies to ensure transparency of lens)!!!!!!
+
+        Finally, the prompt shouldn't be too complex to understand by the AI model. It should be simple and easy to understand with all visual details and product specifications.
+        And maximum focus is on the input images to determine the final output of the 3D model.
+        and if glass lens is transparent, then the color intensity should be 0.0(example prompt could be: 'Model the lens as clear polycarbonate with anti-reflective and scratch-resistant coatings, ensuring full UV protection. Set transparency and reflectivity to represent these optical properties accurately.' )
+        make sure i dont get opaque lens in the 3D model whatsover, it should be transparent and clear lens."""
         
         return await self.llm.ainvoke(validation_prompt)

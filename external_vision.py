@@ -11,6 +11,7 @@ from src.llm.deepseek_client import DeepSeekClient
 import asyncio
 import time
 import os
+import json
 from src.prompt_engineering import PromptGenerator
 from src.prompt_engineering import ConfigGenerator
 from src.rodin_integration import ModelProcessor
@@ -36,7 +37,7 @@ else:
     async def main():
         global product_details
         llm_client = DeepSeekClient()
-        product_url = 'https://www.warbyparker.com/eyeglasses/brimmer/black-walnut'
+        product_url = input("Enter Warby Parker product URL: ")
 
         scraper = WarbyScraper(llm=llm_client)
         product_details = await scraper.scrape(product_url)
@@ -70,11 +71,14 @@ else:
                     - Document material thickness variations (temple vs front)
 
                     2. Logo & Branding Elements:
-                    - Locate exact placement of "WARBY PARKER" text:
-                    • Side (left/right temple)
+                    - Locate and look for exact placement of "WARBY PARKER" text(if present):
+                    • Side (left temple)
                     • Position from hinge (e.g., 10mm from hinge on left temple)
                     • Engraving depth and style (embossed/debossed/printed)
-                    . Etch the text "WARBY PARKER" onto the left temple of the frame with debossed engraving details. Position the text precisely 10mm from the hinge, ensuring it is clearly visible and aligned with the curvature of the temple.
+                    . Etch the text "WARBY PARKER" onto the left temple of the frame(if exists).
+                    . The text should be embossed and in all caps.
+                    . The text should be positioned 10mm from the hinge on the inside of the left temple.
+                    . Rest of the temple arms should be plain (detailed textured as per the image) without any text or logo markings.
 
                     3. Lens Specifications:
                     - Tint gradient analysis:
@@ -204,7 +208,7 @@ else:
 
         # Scrape the generated description
         description_textarea = driver.find_element(By.XPATH, "//textarea[contains(@class, 'w-full h-48')]")
-        time.sleep(2)
+        time.sleep(5)
         vision_analysis = description_textarea.get_attribute("value")
         print("\nExtracted vision analysis:", vision_analysis)
 
@@ -248,7 +252,7 @@ else:
 
     asyncio.run(generate_final_prompt())
 
-'''
+
 async def process_with_rodin():
     # Load the final prompt from the text file
     with open("final_prompt.txt", "r") as file:
@@ -262,15 +266,20 @@ async def process_with_rodin():
     with open("img_list.txt", "r") as file:
         image_urls = file.read().splitlines()
     config = await config_generator.generate_config(final_prompt, image_urls)
+    print("\nGenerated Rodin configuration:", config)
+
+    # Save the generated config to a JSON file
+    with open("config.json", "w") as file:
+        json.dump(config, file, indent=2)
+    print("Saved generated config to 'config.json'")
 
     # Initialize the ModelProcessor and process the product
     processor = ModelProcessor()
     result = processor.process_product(config)
+    print("\nProcessed product:", result)
 
-    # Save the result
-    product_id = "example_product_id"  # Replace with actual product ID if available
-    output_path = processor.api.save_result(result, product_id)
+ # Replace with actual product ID if available
+    output_path = processor.api.save_result(result)
     print(f"Model and textures saved to: {output_path}")
 
 asyncio.run(process_with_rodin())
-'''

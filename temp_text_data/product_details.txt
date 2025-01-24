@@ -1,0 +1,1 @@
+material='hand-polished cellulose acetate and stainless steel' lens_type='Polycarbonate lenses' measurements={'Medium': 136, 'Wide': 142, 'Medium Wide': 136} branding=['Warby Parker'] features=['Anti-reflective and scratch-resistant lens coatings', 'Blocks 100% of UV rays', 'Browline construction'] roughness=0.4 metallic=0.5 ior=1.49
