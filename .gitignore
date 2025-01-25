@@ -1,11 +1,52 @@
+# Environment and Python
 .env
 venv/
 __pycache__/
 *.pyc
+
+# Data files
 *.json
 *.txt
-*.glb.env
+*.csv
 data/
 temp_data/
 tests/
 logs/
+
+# 3D Model files
+*.glb
+*.gltf
+*.obj
+*.fbx
+*.3ds
+*.stl
+*.dae
+*.blend
+*.max
+*.ma
+*.mb
+*.c4d
+*.usd
+*.usda
+*.usdc
+*.usdz
+*.xyz
+*.ply
+*.pcd
+
+# Texture/Image files
+*.png
+*.jpg
+*.jpeg
+*.tiff
+*.tga
+*.bmp
+*.hdr
+*.exr
+
+# Generated model folders
+data/3d_models/
+data/raw_images/
+data/processed_images/
+data/prompts/
+data/configs/
