@@ -211,7 +211,9 @@ class PromptGenerator:
         make sure i dont get opaque lens in the 3D model whatsover, it should be transparent and clear lens.
         !!keywords: ULTRA-PRECISE 3D EYEWEAR MODEL - CRYSTAL CLEAR LENSES REQUIRED.!!
         lines like these 'Use polycarbonate lenses (refractive index: 1.49) with crystal-clear transparency (0.0 color intensity)
-        MANDATORY USE WORDS: like "crystal-clear transparency" when lens is transparent 
+        MANDATORY USE WORDS: like "crystal-clear transparency" when lens is transparent
+
+        finally, the prompt should be more like this: 'Create a 3D model of a pair of glasses based on the given specifications and visual analysis of the glasses.({base_prompt} and {vision_analysis}) 
 '"""
         
         return await self.llm.ainvoke(validation_prompt)

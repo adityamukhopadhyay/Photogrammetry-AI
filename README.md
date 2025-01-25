@@ -1,151 +1,126 @@
 ```markdown
-# Hyper-Realistic Eyeglasses 3D Generator
+# Glasses3D Generative AI System
 
-A pipeline for creating photorealistic 3D models of Warby Parker eyeglasses using product pages and AI-powered 3D generation.
+This project is an advanced AI-driven system that generates **3D models of glasses** from product images and descriptions. It uses a combination of web scraping, AI analysis, and 3D modeling to automate the entire process.
 
-## Features
+---
 
-- **Automated Web Scraping**: Extracts product specifications from Warby Parker product pages
-- **Intelligent Prompt Engineering**: Generates detailed 3D modeling prompts using DeepSeek LLM
-- **High-Fidelity 3D Generation**: Produces production-quality models with Rodin API
-- **Modular Architecture**: Clean separation of components for easy maintenance
-- **Quality Assurance**: Built-in logging and validation at every stage
+## 🚀 Key Features
 
-## Technical Architecture
+- **Automated Data Collection**: Scrapes product details and images from websites using Playwright and BeautifulSoup.
+- **AI-Powered Analysis**: Uses DeepSeek-R1 to analyze images and extract technical specifications (e.g., material, measurements, branding).
+- **3D Model Generation**: Creates high-quality 3D models using FAL Rodin API.
+- **Error-Resilient Workflow**: Built with Pydantic for data validation and retry mechanisms for API calls.
 
-```mermaid
-graph TD
-    A[Product URL] --> B{Data Collection}
-    B --> C[Specifications]
-    B --> D[Product Images]
-    C --> E{Prompt Engineering}
-    E --> F[Technical Prompt]
-    F --> G[Rodin Config]
-    G --> H{Rodin API}
-    H --> I[3D Model]
+---
+
+## 🛠️ How It Works
+
+The system works in **three main layers**:
+
+1. **Data Collection Layer**  
+   - Scrapes product details and images from websites.
+   - Cleans and organizes data using LangChain and BeautifulSoup.
+
+2. **AI Processing Layer**  
+   - Analyzes images and text using DeepSeek-R1.
+   - Generates detailed prompts for 3D modeling.
+
+3. **Data Processing Layer**  
+   - Creates 3D models using FAL Rodin API.
+   - Validates data and ensures accuracy using Pydantic.
+
+---
+
+## 📂 File Structure
+
+```
+Glasses3D/
+├── main.py                 # Main script to run the pipeline
+├── model_processor.py      # Handles 3D model generation using FAL Rodin API
+├── deepseek_client.py      # Integrates DeepSeek-R1 for AI analysis
+├── config_generator.py     # Generates configuration for 3D modeling
+├── prompt_generator.py     # Creates detailed prompts for the AI
+├── product_scraper.py      # Scrapes product details and images
+└── README.md               # This file
 ```
 
-## Modules
+---
 
-### 1. Data Collection
-- **Web Scraping**: Extracts product specs using Playwright and LangChain
-- **Image Extraction**: Captures product image URLs from page HTML
-- **Content Transformation**: Converts HTML to clean text documents
+## 🧰 Technologies Used
 
-### 2. Prompt Engineering
-- **Specs Processing**: Structures product data for 3D modeling
-- **LLM Integration**: Uses DeepSeek for technical prompt generation
-- **Config Creation**: Produces Rodin API-ready JSON configurations
+- **Web Scraping**: Playwright, BeautifulSoup
+- **AI Analysis**: DeepSeek-R1
+- **3D Modeling**: FAL Rodin API
+- **Data Validation**: Pydantic
+- **Automation**: LangChain, Selenium
 
-### 3. 3D Generation
-- **Rodin Integration**: Handles API communication with FAL
-- **Model Processing**: Manages 3D generation jobs and results
-- **Quality Control**: Validates output models and textures
+---
 
-## Installation
+## 🚨 Limitations
 
-### Requirements
-- Python 3.10+
-- FAL API Key
-- DeepSeek API Key
+1. **Single-View Constraints**:  
+   - The system uses only one or two images, so complex details (e.g., curved lenses) may not be perfectly recreated.
 
-### Setup
-```bash
-# Clone repository
-git clone https://github.com/yourusername/warby-3d-generator.git
-cd warby-3d-generator
+2. **Material Ambiguity**:  
+   - It can’t always determine if a material is shiny, matte, or translucent from a single image.
 
-# Create virtual environment
-python3 -m venv venv
-source venv/bin/activate
+3. **Economic Constraints**:  
+   - Training a custom AI model for this task would be expensive, so the system relies on existing tools.
 
-# Install dependencies
-pip install -r requirements.txt
+---
 
-# Setup Playwright browsers
-playwright install chromium
+## 🛠️ Setup Instructions
 
-# Configure environment
-cp .env.example .env
-# Edit .env with your API keys
-```
-
-## Configuration
-
-### Environment Variables (`.env`)
-```ini
-FAL_KEY="your_fal_key"
-DEEPSEEK_API_KEY="your_deepseek_key"
-LOG_LEVEL="INFO"
-```
-
-### Settings (`config/settings.yaml`)
-```yaml
-rodin:
-  quality: high
-  material: PBR
-  addons: HighPack
-
-paths:
-  raw_images: data/raw_images
-  processed_images: data/processed_images
-```
-
-## Usage
-
-### Generate 3D Model
-```bash
-python main.py "https://www.warbyparker.com/eyeglasses/your-product"
-```
-
-### Expected Outputs
-```
-data/
-├── raw_images/         # Original downloaded images
-├── processed_images/   # Enhanced images
-├── prompts/            # Generated technical prompts
-├── configs/            # Rodin API configurations
-└── 3d_models/          # Final GLB models with textures
-```
-
-### Run Tests
-```bash
-python -m tests.test_product_scraper
-```
-
-## Troubleshooting
-
-### Common Issues
-1. **SSL Errors**:  
-   `pip install --upgrade certifi`
-
-2. **API Limits**:  
-   Check balances:
-   - DeepSeek: https://platform.deepseek.com/usage
-   - FAL: https://fal.ai/dashboard
-
-3. **Empty Outputs**:  
-   Run with debug logging:
+1. **Install Dependencies**:
    ```bash
-   python main.py --log-level DEBUG
+   pip install playwright beautifulsoup4 langchain pydantic selenium
    ```
 
-4. **Playwright Issues**:  
-   Reinstall browsers:
+2. **Set Up API Keys**:
+   - Add your DeepSeek and FAL API keys to a `.env` file:
+     ```
+     DEEPSEEK_API_KEY=your_api_key
+     FAL_API_KEY=your_api_key
+     ```
+
+3. **Run the Pipeline**:
    ```bash
-   playwright install
+   python main.py
    ```
 
-## Limitations
-- Dependency on Warby Parker website structure
-- Requires high-quality product images (min 2048px)
-- API costs apply for generation jobs
+---
 
-## License
-MIT License
+## 📊 Example Workflow
 
-## Acknowledgments
-- FAL.ai for Rodin 3D generation
-- DeepSeek for LLM capabilities
-- LangChain for web scraping tools
+1. **Input**: Provide a product URL (e.g., Warby Parker glasses).
+2. **Scraping**: The system scrapes the website for product details and images.
+3. **AI Analysis**: DeepSeek-R1 analyzes the images and generates a detailed description.
+4. **3D Modeling**: FAL Rodin creates a 3D model based on the description.
+5. **Output**: Download the 3D model in GLB format.
+
+---
+
+## 🤝 Contributing
+
+Contributions are welcome! Please follow these steps:
+1. Fork the repository.
+2. Create a new branch (`git checkout -b feature/YourFeature`).
+3. Commit your changes (`git commit -m 'Add some feature'`).
+4. Push to the branch (`git push origin feature/YourFeature`).
+5. Open a pull request.
+
+---
+
+## 📜 License
+
+This project is licensed under the MIT License. See the [LICENSE](LICENSE) file for details.
+
+---
+
+## 🙏 Acknowledgments
+
+- **Playwright**: For browser automation.
+- **DeepSeek**: For AI-powered image and text analysis.
+- **FAL Rodin**: For 3D model generation.
 ```

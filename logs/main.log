@@ -270,3 +270,153 @@ Return a valid JSON configuration for the Rodin API. Your response must be ONLY 
 2025-01-24 23:48:12 - file_logger - ERROR - Processing failed: Expected dict result, got <class 'str'>
 2025-01-24 23:48:12 - file_logger - INFO - Attempting to download the model directly
 2025-01-24 23:48:31 - file_logger - INFO - Successfully downloaded and saved model to data/3d_models/model.glb
+2025-01-25 00:39:06 - file_logger - INFO - DeepSeek client initialized with API key
+2025-01-25 00:39:06 - file_logger - INFO - Submitting Rodin job
+2025-01-25 00:39:37 - file_logger - INFO - DeepSeek client initialized with API key
+2025-01-25 00:41:14 - file_logger - INFO - DeepSeek client initialized with API key
+2025-01-25 00:48:57 - file_logger - INFO - DeepSeek client initialized with API key
+2025-01-25 00:48:57 - file_logger - DEBUG - Starting API request preparation
+2025-01-25 00:48:57 - file_logger - INFO - Sending text-only request to model deepseek-reasoner
+2025-01-25 00:48:57 - file_logger - DEBUG - Request payload preview:
+Combine these technical specifications and visual analysis into a production-ready 3D modeling prompt:  
+        
+        Product Specifications:
+        **Extracted Information**:  
+
+1. **Frame Mater...
+2025-01-25 00:49:46 - file_logger - SUCCESS - API request completed successfully
+2025-01-25 00:49:46 - file_logger - DEBUG - Response metadata: Tokens used - 4952 (Prompt: 2481, Completion: 2471)
+2025-01-25 00:49:46 - file_logger - DEBUG - Response content preview:
+Create a 3D model of rectangular sunglasses with a light pinkish-rose acetate frame exhibiting translucent properties and a smooth, slightly glossy finish (PBR roughness: 0.2, metallic: 0). Frame dime...
+2025-01-25 00:49:47 - file_logger - INFO - DeepSeek client initialized with API key
+2025-01-25 00:49:47 - file_logger - INFO - Submitting Rodin job
+2025-01-25 00:52:45 - file_logger - INFO - DeepSeek client initialized with API key
+2025-01-25 00:52:45 - file_logger - DEBUG - Starting API request preparation
+2025-01-25 00:52:45 - file_logger - INFO - Sending text-only request to model deepseek-reasoner
+2025-01-25 00:52:45 - file_logger - DEBUG - Request payload preview:
+Combine these technical specifications and visual analysis into a production-ready 3D modeling prompt:  
+        
+        Product Specifications:
+        **Extracted Information**:  
+
+1. **Frame Mater...
+2025-01-25 00:53:04 - file_logger - SUCCESS - API request completed successfully
+2025-01-25 00:53:04 - file_logger - DEBUG - Response metadata: Tokens used - 3442 (Prompt: 2508, Completion: 934)
+2025-01-25 00:53:04 - file_logger - DEBUG - Response content preview:
+Create a 3D model of rectangular sunglasses with a translucent pink acetate frame (PBR roughness: 0.2, metallic: 0) featuring subtle glossy finish and smooth texture. Use crystal-clear polycarbonate l...
+2025-01-25 00:53:04 - file_logger - INFO - DeepSeek client initialized with API key
+2025-01-25 00:53:04 - file_logger - INFO - Submitting Rodin job
+2025-01-25 00:54:27 - file_logger - INFO - DeepSeek client initialized with API key
+2025-01-25 00:54:27 - file_logger - DEBUG - Starting API request preparation
+2025-01-25 00:54:27 - file_logger - INFO - Sending text-only request to model deepseek-reasoner
+2025-01-25 00:54:27 - file_logger - DEBUG - Request payload preview:
+Return a valid JSON configuration for the Rodin API. Your response must be ONLY a JSON object.
+
+        Example format:
+        {
+            "prompt": "create a detailed 3D model...",
+            "co...
+2025-01-25 01:04:38 - file_logger - INFO - DeepSeek client initialized with API key
+2025-01-25 01:04:38 - file_logger - DEBUG - Starting API request preparation
+2025-01-25 01:04:38 - file_logger - INFO - Sending text-only request to model deepseek-reasoner
+2025-01-25 01:04:38 - file_logger - DEBUG - Request payload preview:
+Return a valid JSON configuration for the Rodin API. Your response must be ONLY a JSON object.
+
+        Example format:
+        {
+            "prompt": "create a detailed 3D model...",
+            "co...
+2025-01-25 01:04:53 - file_logger - SUCCESS - API request completed successfully
+2025-01-25 01:04:53 - file_logger - DEBUG - Response metadata: Tokens used - 1494 (Prompt: 792, Completion: 702)
+2025-01-25 01:04:53 - file_logger - DEBUG - Response content preview:
+{
+    "prompt": "Create a detailed 3D model of rectangular sunglasses with translucent pink acetate frames (PBR roughness: 0.2, metallic: 0.0), gradient-tinted polycarbonate lenses (crystal-clear tran...
+2025-01-25 01:04:53 - file_logger - INFO - Submitting Rodin job
+2025-01-25 01:07:06 - file_logger - DEBUG - Received handler object: {'model_mesh': {'url': 'https://v3.fal.media/files/monkey/73hllbc447M6N1VlGL0Jr_highpoly_high_pbr.glb', 'content_type': 'application/octet-stream', 'file_name': 'highpoly_high_pbr.glb', 'file_size': 73483600}, 'seed': 2954, 'textures': []}
+2025-01-25 01:07:06 - file_logger - DEBUG - Handler type: <class 'dict'>
+2025-01-25 01:07:06 - file_logger - INFO - Received result from Rodin API
+2025-01-25 01:07:06 - file_logger - DEBUG - Result structure: https://v3.fal.media/files/monkey/73hllbc447M6N1VlGL0Jr_highpoly_high_pbr.glb
+2025-01-25 01:07:06 - file_logger - ERROR - Invalid result structure: Expected dict result, got <class 'str'>
+2025-01-25 01:07:06 - file_logger - ERROR - Processing failed: Expected dict result, got <class 'str'>
+2025-01-25 01:07:06 - file_logger - INFO - Attempting to download the model directly
+2025-01-25 01:07:26 - file_logger - INFO - Successfully downloaded and saved model to data/3d_models/model.glb
+2025-01-25 01:14:23 - file_logger - INFO - DeepSeek client initialized with API key
+2025-01-25 01:14:23 - file_logger - INFO - Submitting Rodin job
+2025-01-25 01:16:49 - file_logger - DEBUG - Received handler object: {'model_mesh': {'url': 'https://v3.fal.media/files/penguin/rkWMlEKPE5UwXnzhpUCO0_highpoly_high_pbr.glb', 'content_type': 'application/octet-stream', 'file_name': 'highpoly_high_pbr.glb', 'file_size': 73659104}, 'seed': 5782, 'textures': []}
+2025-01-25 01:16:49 - file_logger - DEBUG - Handler type: <class 'dict'>
+2025-01-25 01:16:49 - file_logger - INFO - Received result from Rodin API
+2025-01-25 01:16:49 - file_logger - DEBUG - Result structure: https://v3.fal.media/files/penguin/rkWMlEKPE5UwXnzhpUCO0_highpoly_high_pbr.glb
+2025-01-25 01:16:49 - file_logger - ERROR - Invalid result structure: Expected dict result, got <class 'str'>
+2025-01-25 01:16:49 - file_logger - ERROR - Processing failed: Expected dict result, got <class 'str'>
+2025-01-25 01:16:49 - file_logger - INFO - Attempting to download the model directly
+2025-01-25 01:17:18 - file_logger - INFO - Successfully downloaded and saved model to data/3d_models/model.glb
+2025-01-25 01:21:08 - file_logger - INFO - DeepSeek client initialized with API key
+2025-01-25 01:21:08 - file_logger - INFO - Submitting Rodin job
+2025-01-25 01:23:39 - file_logger - DEBUG - Received handler object: {'model_mesh': {'url': 'https://v3.fal.media/files/koala/-Ap4xgn_8UgOBiLRZtchv_highpoly_high_pbr.glb', 'content_type': 'application/octet-stream', 'file_name': 'highpoly_high_pbr.glb', 'file_size': 70671828}, 'seed': 42503, 'textures': []}
+2025-01-25 01:23:39 - file_logger - DEBUG - Handler type: <class 'dict'>
+2025-01-25 01:23:39 - file_logger - INFO - Received result from Rodin API
+2025-01-25 01:23:39 - file_logger - DEBUG - Result structure: https://v3.fal.media/files/koala/-Ap4xgn_8UgOBiLRZtchv_highpoly_high_pbr.glb
+2025-01-25 01:23:39 - file_logger - ERROR - Invalid result structure: Expected dict result, got <class 'str'>
+2025-01-25 01:23:39 - file_logger - ERROR - Processing failed: Expected dict result, got <class 'str'>
+2025-01-25 01:23:39 - file_logger - INFO - Attempting to download the model directly
+2025-01-25 01:24:07 - file_logger - INFO - Successfully downloaded and saved model to data/3d_models/model.glb
+2025-01-25 22:09:27 - file_logger - INFO - DeepSeek client initialized with API key
+2025-01-25 22:12:18 - file_logger - DEBUG - Starting API request preparation
+2025-01-25 22:12:18 - file_logger - INFO - Sending text-only request to model deepseek-reasoner
+2025-01-25 22:12:18 - file_logger - DEBUG - Request payload preview:
+Extract and structure ONLY the following information from the product description:
+
+        Required Information(if available):
+        1. Frame Material (composition and finish):
+        2. Lens Type...
+2025-01-25 22:13:33 - file_logger - SUCCESS - API request completed successfully
+2025-01-25 22:13:33 - file_logger - DEBUG - Response metadata: Tokens used - 5009 (Prompt: 1752, Completion: 3257)
+2025-01-25 22:13:33 - file_logger - DEBUG - Response content preview:
+```json
+{
+  "material": "hand-polished cellulose acetate and stainless steel",
+  "lens_type": "Polycarbonate lenses: impact-resistant, anti-reflective, scratch-resistant, blocks 100% UV rays",
+  "meas...
+2025-01-25 22:15:49 - file_logger - INFO - DeepSeek client initialized with API key
+2025-01-25 22:15:49 - file_logger - DEBUG - Starting API request preparation
+2025-01-25 22:15:49 - file_logger - INFO - Sending text-only request to model deepseek-reasoner
+2025-01-25 22:15:49 - file_logger - DEBUG - Request payload preview:
+Combine these technical specifications and visual analysis into a production-ready 3D modeling prompt:  
+        
+        Product Specifications:
+        material='hand-polished cellulose acetate and ...
+2025-01-25 22:16:07 - file_logger - SUCCESS - API request completed successfully
+2025-01-25 22:16:07 - file_logger - DEBUG - Response metadata: Tokens used - 3215 (Prompt: 2421, Completion: 794)
+2025-01-25 22:16:07 - file_logger - DEBUG - Response content preview:
+Create a 3D model of tortoise-shell eyeglasses using hand-polished cellulose acetate frames with a matte finish (PBR roughness: 0.4, metallic: 0.0). Implement a medium-density marbled pattern across a...
+2025-01-25 22:16:07 - file_logger - INFO - DeepSeek client initialized with API key
+2025-01-25 22:16:07 - file_logger - DEBUG - Starting API request preparation
+2025-01-25 22:16:07 - file_logger - INFO - Sending text-only request to model deepseek-reasoner
+2025-01-25 22:16:07 - file_logger - DEBUG - Request payload preview:
+Return a valid JSON configuration for the Rodin API. Your response must be ONLY a JSON object.
+
+        Example format:
+        {
+            "prompt": "create a detailed 3D model...",
+            "co...
+2025-01-25 22:16:31 - file_logger - SUCCESS - API request completed successfully
+2025-01-25 22:16:31 - file_logger - DEBUG - Response metadata: Tokens used - 1711 (Prompt: 610, Completion: 1101)
+2025-01-25 22:16:31 - file_logger - DEBUG - Response content preview:
+{
+    "prompt": "Create a 3D model of tortoise-shell eyeglasses using hand-polished cellulose acetate frames with a matte finish (PBR roughness: 0.4, metallic: 0.0). Implement a medium-density marbled...
+2025-01-25 22:16:31 - file_logger - INFO - Submitting Rodin job
+2025-01-25 22:18:30 - file_logger - DEBUG - Received handler object: {'model_mesh': {'url': 'https://v3.fal.media/files/zebra/ZH-UUel9TiFUexdxNdmgL_highpoly_high_pbr.glb', 'content_type': 'application/octet-stream', 'file_name': 'highpoly_high_pbr.glb', 'file_size': 69402556}, 'seed': 8935, 'textures': []}
+2025-01-25 22:18:30 - file_logger - DEBUG - Handler type: <class 'dict'>
+2025-01-25 22:18:30 - file_logger - INFO - Received result from Rodin API
+2025-01-25 22:18:30 - file_logger - DEBUG - Result structure: https://v3.fal.media/files/zebra/ZH-UUel9TiFUexdxNdmgL_highpoly_high_pbr.glb
+2025-01-25 22:18:30 - file_logger - ERROR - Invalid result structure: Expected dict result, got <class 'str'>
+2025-01-25 22:18:30 - file_logger - ERROR - Processing failed: Expected dict result, got <class 'str'>
+2025-01-25 22:18:30 - file_logger - INFO - Attempting to download the model directly
+2025-01-25 22:18:48 - file_logger - INFO - Successfully downloaded and saved model to data/3d_models/model.glb
+2025-01-26 02:58:02 - file_logger - INFO - DeepSeek client initialized with API key
+2025-01-26 02:58:02 - file_logger - INFO - Submitting Rodin job
+2025-01-26 02:59:58 - file_logger - DEBUG - Received handler object: {'model_mesh': {'url': 'https://v3.fal.media/files/penguin/k5FNtPJ_OgtijUDH69bMu_highpoly_high_pbr.glb', 'content_type': 'application/octet-stream', 'file_name': 'highpoly_high_pbr.glb', 'file_size': 72560984}, 'seed': 56489, 'textures': []}
+2025-01-26 02:59:58 - file_logger - INFO - Received result from Rodin API
+2025-01-26 02:59:58 - file_logger - DEBUG - Result structure: https://v3.fal.media/files/penguin/k5FNtPJ_OgtijUDH69bMu_highpoly_high_pbr.glb
+2025-01-26 02:59:58 - file_logger - INFO - Attempting to download the model
+2025-01-26 03:00:34 - file_logger - INFO - Successfully downloaded and saved model to data/3d_models/model.glb

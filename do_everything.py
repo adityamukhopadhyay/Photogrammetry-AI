@@ -5,16 +5,16 @@ from selenium.webdriver.chrome.service import Service
 from webdriver_manager.chrome import ChromeDriverManager
 from selenium.webdriver.support.ui import WebDriverWait
 from selenium.webdriver.support import expected_conditions as EC
-from src.data_collection.product_scraper import WarbyScraper
 from dotenv import load_dotenv
-from src.llm.deepseek_client import DeepSeekClient
 import asyncio
 import time
 import os
 import json
-from src.prompt_engineering import PromptGenerator
-from src.prompt_engineering import ConfigGenerator
 from src.rodin_integration import ModelProcessor
+from src.llm.deepseek_client import DeepSeekClient
+from src.prompt_engineering import ConfigGenerator
+from src.prompt_engineering import PromptGenerator
+from src.data_collection.product_scraper import WarbyScraper
 # from data_collection.product_scraper import WarbyScraper
 
 if os.path.exists("vision_analysis.txt") and os.path.exists("product_details.txt"):
@@ -43,6 +43,10 @@ else:
         product_details = await scraper.scrape(product_url)
         print("\n\nExtracted Product Details:\n", product_details)
 
+        # Save product details to a text file
+        with open("product_details.txt", "w") as file:
+            file.write(str(product_details))
+
         print("\n\nExtracted Image URLs:")
         print(scraper.image_urls[0]+'\n'+
         scraper.image_urls[1])
@@ -54,9 +58,6 @@ else:
         # Your image URL to input
         img_url.append(scraper.image_urls[0])
 
-            # Save product details to a text file
-        with open("product_details.txt", "w") as file:
-            file.write(str(product_details))
 
     # Set up the WebDriver service
     asyncio.run(main())
@@ -267,7 +268,7 @@ async def process_with_rodin():
     if os.path.exists("config.json"):
         with open("config.json", "r") as file:
             config = json.load(file)
-        print("Loaded config from 'config.json'")
+        print("\nLoaded config from 'config.json'")
     else:
         config_generator = ConfigGenerator(llm=llm_client)
 
@@ -280,7 +281,7 @@ async def process_with_rodin():
         # Save the generated config to a JSON file
         with open("config.json", "w") as file:
             json.dump(config, file, indent=2)
-        print("Saved generated config to 'config.json'")
+        print("\nSaved generated config to 'config.json'")
 
     # Initialize the ModelProcessor and process the product
     processor = ModelProcessor()
